@@ -5,7 +5,7 @@
 ### 1.1. 네트워크가 없어도 잘 살던 시절이 있었습니다
 ### 1.2. 이제는 인터넷 세상
 ### 1.3. 네트워킹의 정체
-### 1.4. 인터넷, 인트라넷, 엑스트라넷 <br /><br />
+### 1.4. 인터넷, 인트라넷, 엑스트라넷 <br /><br /><br />
 
 ## **[2. 네트워크와 케이블, 그리고 친구들](https://github.com/swywssaid/TIL/blob/main/network/network-cable.md)**
 ### 2.1. LAN(Local Area Network)이란?
@@ -16,14 +16,14 @@
 ### 2.6. 맥 어드레스(MAC Address)에 대한 이야기
 ### 2.7. 유니캐스트, 브로드캐스트, 멀티캐스트
 ### 2.8. OSI 7 Layer(계층)는 왜 만들어졌나요?
-### 2.9. 컴퓨터는 프로토콜(Protocol)로 말한다 <br /><br />
+### 2.9. 컴퓨터는 프로토콜(Protocol)로 말한다 <br /><br /><br />
 
 ## **[3. TCP/IP와의 만남](https://github.com/swywssaid/TIL/blob/main/network/tcp-ip.md)**
 ### 3.1. TCP/IP를 모르면 인터넷을 아는 게 아니다?
 ### 3.2. 이 세상에서 나만을 위한 유일한 것
 ### 3.3. 컴퓨터는 이진수로만 이해한다는데…
 ### 3.4. 이진수 계산 그 첫 번째
-### 3.5. 이진수 계산 그 두 번째 <br /><br />
+### 3.5. 이진수 계산 그 두 번째 <br /><br /><br />
 
 ## **[4. 네트워크 장비에 관한 이야기](https://github.com/swywssaid/TIL/blob/main/network/network-equipment.md)**
 ### 4.1. 랜카드도 세팅해야 되나요?
@@ -35,7 +35,7 @@
 ### 4.7. 브리지/스위치의 기능
 ### 4.8. Looping(뺑뺑이)은 왜 생길까요?
 ### 4.9. 스패닝 트리되지 않는 스위치는 팥 없는 찐빵!
-### 4.10. 라우팅이냐, 스위칭이냐? <br /><br />
+### 4.10. 라우팅이냐, 스위칭이냐? <br /><br /><br />
 
 ## **[5. IP 주소로의 여행](https://github.com/swywssaid/TIL/blob/main/network/ip-adress.md)**
 ### 5.1. IP 주소 이야기 - 1탄
@@ -48,7 +48,7 @@
 ### 5.8. 서브넷 마스크의 기본 성질
 ### 5.9. 서브넷 마스크, 그 속으로…
 ### 5.10. 서브넷 마스크에 대한 시험
-### 5.11. IP와 서브넷에 대한 정리 <br /><br />
+### 5.11. IP와 서브넷에 대한 정리 <br /><br /><br />
 
 ## **[6. 스위치를 켜라!](https://github.com/swywssaid/TIL/blob/main/network/switch.md)**
 ### 6.1. 스위치와 브리지
@@ -68,7 +68,7 @@
 ### 6.15. VLAN에서 꼭 기억해야 할 몇 가지
 ### 6.16. VLAN에서의 트렁킹과 VTP(VLAN Trunking Protocol)
 ### 6.17. VLAN의 구성
-### 6.18. 실제 상황! VLAN <br /><br />
+### 6.18. 실제 상황! VLAN <br /><br /><br />
 
 ## **[7. 라우터만 알면 네트워크 도사?](https://github.com/swywssaid/TIL/blob/main/network/router.md)**
 ### 7.1. 라우터를 한 마디로 말하자면…
@@ -91,14 +91,14 @@
 ### 7.18. 라우터의 패스워드 구성
 ### 7.19. 시스코 라우터의 친구 찾기 CDP
 ### 7.20. 텔넷(Telnet)을 이용한 장비 접속
-### 7.21. 핑(Ping)과 트레이스(Trace) <br /><br />
+### 7.21. 핑(Ping)과 트레이스(Trace) <br /><br /><br />
 
-## **8. 라우팅 프로토콜과의 한판**
+## **[8. 라우팅 프로토콜과의 한판](https://github.com/swywssaid/TIL/blob/main/network/routing-protocol.md)**
 ### 8.1. RIP라는 라우팅 프로토콜에 대한 이야기
 ### 8.2. RIP와 함께 춤을?
 ### 8.3. Distance - Vector 라우팅 알고리즘에서의 문제점과 해결책
 ### 8.4. IGRP 라우팅 프로토콜
-### 8.5. OSPF 라우팅 프로토콜 <br /><br />
+### 8.5. OSPF 라우팅 프로토콜 <br /><br /><br />
 
 ## **[9. 라우터, 그 속으로 전진!](https://github.com/swywssaid/TIL/blob/main/network/network-access-control.md)**
 ### 9.1. 네트워크 접근 제어 액세스 리스트(Access List)
@@ -108,13 +108,13 @@
 ### 9.5. 텔넷포트(VTY Port)에서의 액세스 리스트
 ### 9.6. 익스텐디드 액세스 리스트(Extended Access List)
 ### 9.7. 라우터의 장애 대비 HSRP
-### 9.8. IP 주소의 변환 NAT(Network Address Translation) <br /><br />
+### 9.8. IP 주소의 변환 NAT(Network Address Translation) <br /><br /><br />
 
 ## **[10. 세상을 넓고 네트워킹은 계속된다](https://github.com/swywssaid/TIL/blob/main/network/wide-area.md)**
 ### 10.1. WAN은 어렵다?
 ### 10.2. HDLC보다 괜찮은 PPP
 ### 10.3. 프레임 릴레이(Frame-Relay) 구성
-### 10.4. ISDN의 추억 <br /><br />
+### 10.4. ISDN의 추억 <br /><br /><br />
 
 ## **[11. 선이 없는 세상, 무선으로의 여행](https://github.com/swywssaid/TIL/blob/main/network/wireless-communication/wireless-communication.md)**
 ### 11.1. 무선으로의 여행
@@ -125,7 +125,7 @@
 ### 11.6. 무선 네트워크에서의 보안
 ### 11.7. AP를 직접 만져보자
 ### 11.8. AP를 직접 구성해볼까요?
-### 11.9. 정말 색다른 네트워크 장비(?) <br /><br />
+### 11.9. 정말 색다른 네트워크 장비(?) <br /><br /><br />
 
 ## **[12. IPv6로 떠나는 여행](https://github.com/swywssaid/TIL/blob/main/network/ipv6.md)**
 ### 12.1. IPv6, 왜 필요한 걸까요?

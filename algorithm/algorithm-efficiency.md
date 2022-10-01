@@ -4,8 +4,7 @@
 - 단순한 속도로 비교하기엔 하드웨어의 차이가 있다.
 - 알고리즘의 실행 시간은 크게 두 부분으로 나눠 생각한다.  
     1. 입력값의 크기에 따른 알고리즘의 실행 시간
-    2. 입력값의 크기에 따라 이 함수가 얼마나 빨리 커지는지  
-        = 실행 시간의 **증가율(rate of growth)**
+    2. 입력값의 크기에 따라 이 함수가 얼마나 빨리 커지는지  = 실행 시간의 **증가율(rate of growth)**
 - 최악의 경우를 고려한다.
   
 <br /><br />
@@ -18,10 +17,9 @@
 <br /><br />
 
 ### **2.1. Big-O notation (빅 오 표기법)**
-$$
-if\quad g(n) \leq k*f(n) \; \rightarrow \; O(f(n))
-$$
-$running\;time = g(n),\; n \rightarrow \infin,\; k_1 < 0$
+
+$if\quad g(n) \leq k*f(n) \ \rightarrow \ O(f(n)) \quad\quad\quad    (\ running\ \ time = g(n),\ n \rightarrow \infty,\ k < 0\ )$
+
 - 알고리즘의 성능의 상한선을 의미한다. (점근적 상한선)
     - g(n) = n 일 때 n <= k*n를 만족하는 k 존재.(예시. k = 1) 따라서 실행 시간은 O(n)로 표기.
     - g(n) = 2n 일 때 2n <= k*n를 만족하는 k 존재.(예시. k = 2) 따라서 실행 시간은 O(n)로 표기.     
@@ -34,10 +32,7 @@ $running\;time = g(n),\; n \rightarrow \infin,\; k_1 < 0$
 <br /><br />
 
 ### **2.2. Big-Ω notation (빅 오메가 표기법)**
-$$
-if\quad g(n) \geq k*f(n) \; \rightarrow \; Ω(f(n))
-$$
-$running\;time = g(n),\; n \rightarrow \infin,\; k_1 < 0$
+$if\quad g(n) \geq k*f(n) \ \rightarrow \ Ω(f(n)) \quad\quad\quad    (\ running\ \ time = g(n),\ n \rightarrow \infty,\ k < 0\ )$
 - 알고리즘의 성능의 하한선을 의미한다. (점근적 하한선)
     - g(n) = n 일 때 n >= k*n를 만족하는 k 존재.(예시. k = 1) 따라서 실행 시간은 Ω(n)로 표기.
     - g(n) = 2n 일 때 2n >= k*n를 만족하는 k 존재.(예시. k = 2) 따라서 실행 시간은 Ω(n)로 표기.     
@@ -50,14 +45,11 @@ $running\;time = g(n),\; n \rightarrow \infin,\; k_1 < 0$
 <br /><br />
 
 ### **2.3. Big-θ notation (빅 세타 표기법)**
-$$
-if\quad k_1*f(n) \leq g(n) \leq k_2*f(n) \; \rightarrow \; Ω(f(n))
-$$
-$running\;time = g(n),\; n \rightarrow \infin,\; k_1 < 0,\;k_2 < 0$
+$if\quad k_1 * f(n) \leq g(n) \leq k_2 * f(n) \ \rightarrow \ θ(f(n)) \quad\quad\quad    (\ running\ \ time = g(n),\ n \rightarrow \infty,\ k_1 < 0,\ k_2 < 0\ )$
 - 알고리즘의 성능의 경계값을 의미한다. (점근적 경계값)
-    - g(n) = n 일 때 $k_1*n \leq n \leq k_2*n$ 를 만족하는 $k_1,k_2$ 존재.(예시. $k_1 = 1,k_2 = 1$) 따라서 실행 시간은 θ(n)로 표기.
-    - g(n) = $2n^2$ 일 때 $k_1*n^2 \leq 2n^2 \leq k_2*n^2$ 를 만족하는 $k_1,k_2$ 존재.(예시. $k_1 = 1,k_2 = 2$) 따라서 실행 시간은 θ($n^2$)로 표기.     
-    - g(n) = $2n^5+2n^3+300n+2$ 일 때 $k_1*n^5 \leq 2n^5+2n^3+300n+2 \leq k_2*n^5$  를 만족하는 k 존재.(예시. $k_1 = 1,k_2 = 2$) 따라서 실행 시간은 Ω($n^5$)로 표기.
+    - g(n) = n 일 때 $k_1 * n \leq n \leq k_2 * n$ 를 만족하는 $k_1,k_2$ 존재.(예시. $k_1 = 1,\ k_2 = 1$) 따라서 실행 시간은 θ(n)로 표기.
+    - g(n) = $2n^2$ 일 때 $k_1 * n^2 \leq 2n^2 \leq k_2 * n^2$ 를 만족하는 $k_1,k_2$ 존재.(예시. $k_1 = 1,\ k_2 = 2$) 따라서 실행 시간은 θ($n^2$)로 표기.     
+    - g(n) = $2n^5+2n^3+300n+2$ 일 때 $k_1 * n^5 \leq 2n^5 + 2n^3 + 300n + 2 \leq k_2 * n^5$  를 만족하는 $k_1,k_2$ 존재.(예시. $k_1 = 1,\ k_2 = 2$) 따라서 실행 시간은 θ($n^5$)로 표기.
 - 위 3번째 예시를 보면 최고 차항의 지수만 고려하였다. 그 이유는 n이 충분히 큰 값일 때를 고려하기 때문에 나머지 항은 발산했을 때 미미한 영향을 미치기 때문이다. 아래와 같은 상황이다
   > 실제론 내 재산이 10조 2백만 3백원일 때, 친구에게 가서 "내 재산이 10조 정도 됨" 이라고 하는 상황.
 

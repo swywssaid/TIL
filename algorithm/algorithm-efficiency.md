@@ -21,6 +21,7 @@
 $$
 if\quad g(n) \leq k*f(n) \; \rightarrow \; O(f(n))
 $$
+
 $running\;time = g(n),\; n \rightarrow \infin,\; k_1 < 0$
 - 알고리즘의 성능의 상한선을 의미한다. (점근적 상한선)
     - g(n) = n 일 때 n <= k*n를 만족하는 k 존재.(예시. k = 1) 따라서 실행 시간은 O(n)로 표기.

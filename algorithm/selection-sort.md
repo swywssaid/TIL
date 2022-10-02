@@ -62,3 +62,5 @@ selectionSort(arr)
 [Selection Sort Algorithm](https://www.geeksforgeeks.org/selection-sort/?ref=gcse)
 
 [Selection Sort VS Bubble Sort](https://www.geeksforgeeks.org/selection-sort-vs-bubble-sort/?ref=gcse)
+
+[알고리즘.데이터구조 with Nico](https://www.youtube.com/watch?v=NFETSCJON2M&list=PL7jH19IHhOLMdHvl3KBfFI70r9P0lkJwL&index=2) 

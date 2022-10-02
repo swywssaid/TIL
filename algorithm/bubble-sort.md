@@ -1,9 +1,8 @@
 # **Bubble Sort**
 
 ## **1. Bubble Sort (버블 정렬)**
-- 배열을 정렬할 때 사용하는 알고리즘.
-- 인접한 두 요소를 비교 후 의도한 순서에 맞게 스왑한다.
-- 여기서 순서란 오른차순, 내림차순이 될 수 있다.
+- 버블 정렬은 두 요소를 확인하고 올바른 위치에서 교환하는 정렬 알고리즘입니다.
+- 여기서 올바른 위치란 오른차순, 내림차순을 고려한 순서가 될 수 있다.
 <img src="..\image\algorithm\bubble-sort\bubble-sort.png" width="600" height="330">
 <img src="..\image\algorithm\bubble-sort\bubble-sort2.png" width="600" height="330">
 

@@ -71,6 +71,8 @@
 
 ### 2.2 사분할다중화(Time Division Multiplexing, TDM)
 
+### 2.3 코드분할다중화(Code Division Multiplexing, CDM)
+
 ## 3 데이터통신망의 유형
 - 데이터통신망은 통신망에 접속된 컴퓨터들간에 데이터를 송수신 하는 경우, 경로를 설정하는지의 여부에 의해 크게 **방송통신망(broadcast communication network)** 과 **교환통신망(switched communication network)** 로 나뉜다.
 - 방송통신망의 대표적인 예로 인공위성을 이용한 데이터통신망과 **근거리통신(LAN)** 이다.

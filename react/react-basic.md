@@ -23,6 +23,30 @@
 
 <br /><br />
 
+## **4. Event**
+- 여기서 html 코드는 순수한 html 코드와 다르다. 유사 html이다.
+  - 리액트가 최종적으로 브라우저가 이해할 수 있는 html 로 컨버팅해주는 것이다.
+
+<br /><br />
+
+## **5. State**
+- 아래 구조는 컴포넌트를 나타낸다.
+- 입력값을 prop으로 받고 컴포넌트 함수로 처리하여 리턴값을 만들면 바로 그 리턴값이 새로운 UI가 된다.
+- state는 컴포넌트를 다시 실행하여 새로운 리턴값을 만들어내게 된다.
+- prop과 state의 값이 바뀌면 새로운 리턴값을 만들어내게된다.
+- 이 둘의 차이점은 prop은 컴포넌트를 사용하는 외부자를 위한 데이터이고 state는 컴포넌트를 만드는 내부자를 위한 데이터이다.
+- hook이란 리엑트에서 제공하고 있는 기본적인 함수를 말한다. 
+ <img src="..\image\react\react-basic\state.png" width="600" height="330">
+
+ ```javascript
+const _mode = useState('WELCOME');
+const mode = _mode[0];
+const setMode = _mode[1];  
+// 아래와 같이 바꿀수있음
+
+const [mode, setMode] = useState('WELCOME');
+ ```
+<br /><br />
 
 
 ### **Reference**

@@ -48,6 +48,34 @@ const [mode, setMode] = useState('WELCOME');
  ```
 <br /><br />
 
+### **5.1. State와 데이터타입**
+- 원시데이터타입과 객체데이터타입일 때 state 사용방법이 다르다.
+- 리엑트는 state값이 변하지 않았다면 굳이 컴포넌트를 재실행하지 않는다.
+```javascript
+// 원시데이터타입
+const [mode, setMode] = useState(1);
+setMode(2);  // 재실행됨. 원시데이터이기 때문.
+
+-------------------------------------------------
+
+// 객체데이터타입
+const [mode, setMode] = useState([1]);
+mode.push(2); // [1,2] 참조이다. 
+setMode(mode); // mode값에는 변화가 없다. 
+
+const [mode, setMode] = useState([1]);
+let newMode = [...mode]; // mode 복제
+newMode.push(2);  // [1,2] 복제한값이 변경
+setMode(newMode); // mode와 다르므로 재실행됨.
+
+```
+<br /><br />
+
+### **5.2. State 변경함수와 비동기처리**
+- state 변경함수들은 전부 asynchronous (비동기적) 으로 처리.
+  -  오래걸리면 이거 제껴두고 다른 밑에 있는 코드들부터 실행.  
+
+<br /><br />
 
 ### **Reference**
 [생활코팅-React](https://opentutorials.org/course/4900)

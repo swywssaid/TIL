@@ -77,6 +77,47 @@ setMode(newMode); // mode와 다르므로 재실행됨.
 
 <br /><br />
 
+## **6. CRUD**
+- 대부분의 어플리케이션은 4가지 기능을 갖고 있다.
+  - create read update delete
+
+<br /><br />
+
+### **6.1. CREATE**
+- 현재 우리는 새로운 페이지로 이동하여 화면을 바꾸는 것이 아닌 state를 변경하므로 바꾸고있다.
+  - SPA(Single Page Application) 
+- 따라서 create 링크를 만들고 실제 페이지로 이동하는 것이 아닌 state를 변경해준다.
+
+<br /><br />
+
+### **6.2. UPDATE**
+- UPDATE = CREATE + READ
+
+<br/>
+
+**기존 값 props를 통해 나타내기**  
+```javascript
+<form>
+    <p>
+        <input type="text" name="title" value={props.title} />
+    </p>
+    <p>
+        <textarea name="body" value={props.body}></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Update" />
+    </p>
+</form>
+```
+<img src="..\image\react\react-basic\update.png" width="400" height="350">
+
+- 컴포넌트에서 props로 값을 받아 기존의 값을 나타내었다.
+- 하지만 값을 변경할 수 없었다. 그 이유는 value를 props.title과 같이 설정을 했는데 이는 ‘어명’ 처럼 좀더 높은 불변의 명령어이다. 
+- 우리가 값을 바꾼다고 하더라도 이는 화면에서의 변경일뿐 코드는 변하지 않는다. 
+- 따라서 외부에서 받은 prop을 state로 환승? 해준다.
+
+<br/><br/>
+
 ### **Reference**
 [생활코팅-React](https://opentutorials.org/course/4900)
 

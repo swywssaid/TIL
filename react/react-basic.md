@@ -159,6 +159,32 @@ return (
 
 <br /><br />
 
+
+### **6.3. DELETE**
+- 리엑트에서는 하나의 부모 태그 안에 태그들이 들어있어야한다. 
+- 아래와 같이 빈태그로 복수의 태그들을 묶어준다. html로 변환될때는 아무의미도 없다.
+```javascript
+<>
+    <li>
+        <a
+        href={"/update/" + id}
+        onClick={(event) => {
+            event.preventDefault();
+            setMode("UPDATE");
+        }}
+        >
+        Update
+        </a>
+    </li>
+    <li>
+        <input type="button" value="Delete" onClick={() => {}}></input>
+    </li>
+</>
+```
+
+<br /><br />
+
+
 ### **Reference**
 [생활코팅-React](https://opentutorials.org/course/4900)
 

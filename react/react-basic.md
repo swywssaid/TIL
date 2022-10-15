@@ -118,6 +118,47 @@ setMode(newMode); // mode와 다르므로 재실행됨.
 
 <br/><br/>
 
+**변경되는 값 onChage를 통해 확인하기**
+
+```javascript
+const [title, setTitle] = useState(props.title);
+const [body, setBody] = useState(props.body);
+
+return (
+<p>
+    <input
+    type="text"
+    name="title"
+    value={title}
+    onChange={(event) => {
+        console.log(event.target.value);
+    }}
+    />
+</p>
+)
+
+--------------------------------------------------------------------
+return (
+<p>
+    <input
+    type="text"
+    name="title"
+    value={title}
+    onChange={(event) => {
+        setTitle(event.target.value);
+    }}
+    />
+</p>
+)
+```
+- props를 state로 만들었다고 해서 바로 값이 바뀌는 것은 아니다. 우리가 값을 입력한다고 해서 현재의 state가 바뀌는 것이 아니기 때문.
+- html과 리엑트의 `onchange` 는 다르다.
+  - html에서는 포커싱이 인풋 필드를 벗어나면 호출된다.
+  - 반면에 리엑트는 값을 입력할 때 마다 호출된다.
+- 값을 입력받을 때 마다 state를 갱신한다.
+
+<br /><br />
+
 ### **Reference**
 [생활코팅-React](https://opentutorials.org/course/4900)
 

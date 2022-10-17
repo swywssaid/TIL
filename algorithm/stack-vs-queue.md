@@ -1,4 +1,10 @@
 # Stack vs Queue
+- [Stack vs Queue](#stack-vs-queue)
+  - [**1. Stack & Queue**](#1-stack--queue)
+  - [**2. Stack (스택)**](#2-stack-스택)
+  - [**3. Queue (큐)**](#3-queue-큐)
+
+<br /><br />
 
 ## **1. Stack & Queue**
 - Abstract Date Type (ADT: 추상적 자료구조)의 구조를 지님.
@@ -32,7 +38,7 @@
 
 <br /><br />
 
-## **Reference**
+## **Reference**<!-- omit in toc -->
 
 [Difference between Stack and Queue Data Structures](https://www.geeksforgeeks.org/difference-between-stack-and-queue-data-structures/?ref=gcse)
 

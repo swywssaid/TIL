@@ -1,11 +1,28 @@
-# Data Communication Network
+# **Data Communication Network**
+- [**Data Communication Network**](#data-communication-network)
+  - [**1 데이터통신망의 기초개념**](#1-데이터통신망의-기초개념)
+    - [**1.1 통신대화방식 (Communication Method)**](#11-통신대화방식-communication-method)
+    - [**1.2 병렬형 전송과 직렬형 전송**](#12-병렬형-전송과-직렬형-전송)
+    - [**1.3 비동기식 전송과 동기식 전송**](#13-비동기식-전송과-동기식-전송)
+    - [**1.4 동기식 전송방식/문자중심전송과 비트중심전송**](#14-동기식-전송방식문자중심전송과-비트중심전송)
+    - [**1.5 DTE-DCE 인터페이스(Interface)**](#15-dte-dce-인터페이스interface)
+  - [**2 다중화**](#2-다중화)
+    - [**2.1 주파수분할다중화(Frequency Division MultiPlexing, FDM)**](#21-주파수분할다중화frequency-division-multiplexing-fdm)
+    - [**2.2 사분할다중화(Time Division Multiplexing, TDM)**](#22-사분할다중화time-division-multiplexing-tdm)
+    - [**2.3 코드분할다중화(Code Division Multiplexing, CDM)**](#23-코드분할다중화code-division-multiplexing-cdm)
+  - [**3 데이터통신망의 유형**](#3-데이터통신망의-유형)
+    - [**3.1 회선교환망**](#31-회선교환망)
+    - [**3.2 패킷교환망**](#32-패킷교환망)
 
-## 1 데이터통신망의 기초개념
+<br /><br />
+
+
+## **1 데이터통신망의 기초개념**
 - 데이터통신망(Data Networks)의 시작은 미 국방성의 ARPA 네트워크로 지속적으로 발전해왔다.
 
 <br />
 
-### 1.1 통신대화방식 (Communication Method)
+### **1.1 통신대화방식 (Communication Method)**
 두 시스템 사이의 통신을 위해서는 송신자와 수신자를 명확히 구분하고 정보를 주고 받는 방식이 결정되어야하는데 이를 **통신대화방식** 이라한다. 
 
 <br />
@@ -28,7 +45,7 @@
   - 송신과 수신을 위해 별도의 채널 두는 것. 
    <img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\communication-method.png" width="600" height="330">
 
-### 1.2 병렬형 전송과 직렬형 전송
+### **1.2 병렬형 전송과 직렬형 전송**
 - 병렬형 (Parallel) 전송
     - 비트별 전송선 
       - 다량의 데이터를 동시에 전송
@@ -49,7 +66,7 @@
 
 <br />  
 
-### 1.3 비동기식 전송과 동기식 전송
+### **1.3 비동기식 전송과 동기식 전송**
 - 송신측과 수신측 사이에 송신시점과 수신시점을 합의하는 절차를 **동기화(synchronization)** 라 한다.
 - **비동기식 전송(Asynchronous Transmission)** 
    - start bit + 7bit character + 1bit parity + stop bit
@@ -62,13 +79,13 @@
 - **동기식 전송(Synchronous Transmission)**
   - 
 
-### 1.4 동기식 전송방식/문자중심전송과 비트중심전송
+### **1.4 동기식 전송방식/문자중심전송과 비트중심전송**
 
 - bit stuffing?
 
-### 1.5 DTE-DCE 인터페이스(Interface)
+### **1.5 DTE-DCE 인터페이스(Interface)**
 
-## 2 다중화
+## **2 다중화**
 - 중앙컴퓨터와 다수의 원격지 단말들을 각각 전용 전송선으로 연결한다면 비용면에서 매우 비효율적.
 - 대규모 통신시스템에서는 그림과 같이 적은 용량만을 필요로 하는 여러 가닥의 정보 흐름을 하나의 용량이 큰 전송선으로 전송하는 방법을 **다중화(multiplexing)** 라고 한다.
 - 여러 경로를 통해 들어오는 정보의 흐름을 모으는 다중화 기능을 가진 장비를 **다중화장치(multiplexer, MUX)** 라 한다.
@@ -78,17 +95,17 @@
 
 
 
-### 2.1 주파수분할다중화(Frequency Division MultiPlexing, FDM)
+### **2.1 주파수분할다중화(Frequency Division MultiPlexing, FDM)**
 
-### 2.2 사분할다중화(Time Division Multiplexing, TDM)
+### **2.2 사분할다중화(Time Division Multiplexing, TDM)**
 
-### 2.3 코드분할다중화(Code Division Multiplexing, CDM)
+### **2.3 코드분할다중화(Code Division Multiplexing, CDM)**
 
-## 3 데이터통신망의 유형
+## **3 데이터통신망의 유형**
 - 데이터통신망은 통신망에 접속된 컴퓨터들간에 데이터를 송수신 하는 경우, 경로를 설정하는지의 여부에 의해 크게 **방송통신망(broadcast communication network)** 과 **교환통신망(switched communication network)** 로 나뉜다.
 - 방송통신망의 대표적인 예로 인공위성을 이용한 데이터통신망과 **근거리통신(LAN)** 이다.
 - 교환통신망은 **회선교환망(circuit switched network)** 과 **패킨교환망(packet switched network)** 로 구분된다.
 
-### 3.1 회선교환망
+### **3.1 회선교환망**
 
-### 3.2 패킷교환망
+### **3.2 패킷교환망**

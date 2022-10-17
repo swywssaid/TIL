@@ -1,4 +1,10 @@
 # **Bubble Sort**
+- [**Bubble Sort**](#bubble-sort)
+  - [**1. Bubble Sort (버블 정렬)**](#1-bubble-sort-버블-정렬)
+  - [**2. 버블 정렬 구현 (최적화 전)**](#2-버블-정렬-구현-최적화-전)
+  - [**3. 버블 정렬 구현 (최적화)**](#3-버블-정렬-구현-최적화)
+
+<br /><br />
 
 ## **1. Bubble Sort (버블 정렬)**
 - 버블 정렬은 두 요소를 확인하고 올바른 위치에서 교환하는 정렬 알고리즘입니다.
@@ -73,7 +79,7 @@ bubbleSort(arr)
 
 <br /><br />
 
-## **Reference**
+## **Reference**<!-- omit in toc -->
 
 [Bubble Sort algorithm using JavaScript](https://www.geeksforgeeks.org/bubble-sort-algorithms-by-using-javascript/)
 

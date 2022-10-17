@@ -1,4 +1,12 @@
 # **Insertion Sort**
+- [**Insertion Sort**](#insertion-sort)
+  - [**1. Insertion Sort (삽입 정렬)**](#1-insertion-sort-삽입-정렬)
+  - [**2. Bubble Sort VS Selection Sort VS Insertion Sort**](#2-bubble-sort-vs-selection-sort-vs-insertion-sort)
+    - [**2.1. Bubble Sort**](#21-bubble-sort)
+    - [**2.2. Selection Sort**](#22-selection-sort)
+    - [**2.3. Insertion Sort**](#23-insertion-sort)
+
+<br /><br />
 
 ## **1. Insertion Sort (삽입 정렬)**
 - 현재 요소와 이전 요소를 비교하고 규칙에 맞게 스왑한다. arr[1]에서 arr[N]까지 반복한다.
@@ -47,7 +55,8 @@ function insertionSort(arr) {
 ```
 <br /><br />
 
-## **2. [Bubble Sort](https://github.com/swywssaid/TIL/blob/main/algorithm/bubble-sort.md#bubble-sort) VS [Selection Sort](https://github.com/swywssaid/TIL/blob/main/algorithm/selection-sort.md) VS Insertion Sort**
+## **2. Bubble Sort VS Selection Sort VS Insertion Sort**
+
 <br />
 
 <img src="..\image\algorithm\insertion-sort\insertion-sort2.png" width="600" height="330">
@@ -107,7 +116,7 @@ function insertionSort(arr) {
 
 <br /><br />
 
-## **Reference**  
+## **Reference**<!-- omit in toc -->  
 [Insertion Sort](https://www.geeksforgeeks.org/insertion-sort/?ref=lbp)
 
 [Comparison among Bubble Sort, Selection Sort and Insertion Sort](https://www.geeksforgeeks.org/comparison-among-bubble-sort-selection-sort-and-insertion-sort/?ref=rp)

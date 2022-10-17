@@ -1,4 +1,10 @@
 # **Linear Search vs Binary Search**
+- [**Linear Search vs Binary Search**](#linear-search-vs-binary-search)
+  - [**1. Linear Search (선형 검색 알고리즘)**](#1-linear-search-선형-검색-알고리즘)
+  - [**2. Binary Search (이진 검색 알고리즘)**](#2-binary-search-이진-검색-알고리즘)
+  - [**3. Linear Search vs Binary Search**](#3-linear-search-vs-binary-search)
+
+<br /><br />
 
 ## **1. Linear Search (선형 검색 알고리즘)**
 - 어느 배열에서도 사용 가능.
@@ -30,5 +36,5 @@
 
 <br /><br />
 
-## **Reference**
+## **Reference**<!-- omit in toc -->
 [알고리즘.데이터구조 with Nico](https://www.youtube.com/watch?v=NFETSCJON2M&list=PL7jH19IHhOLMdHvl3KBfFI70r9P0lkJwL&index=2)    

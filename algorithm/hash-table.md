@@ -1,4 +1,12 @@
-# Hash Table
+# **Hash Table**
+
+- [**Hash Table**](#hash-table)
+  - [**1. Hash Table (해쉬 태이블)**](#1-hash-table-해쉬-태이블)
+  - [**2. 구성 요소**](#2-구성-요소)
+  - [**3. 작동 원리**](#3-작동-원리)
+  - [**4. Collision (해쉬 충돌)**](#4-collision-해쉬-충돌)
+
+<br /><br />
 
 ## **1. Hash Table (해쉬 태이블)**
 - key(키), value(값)로 데이터 저장 
@@ -41,7 +49,7 @@
 
 <br /><br />
 
-## **Reference**
+## **Reference**<!-- omit in toc -->
 [Hash Tables](https://www.codecademy.com/resources/docs/javascript/hashtables)
 [개발자라면 꼭 알아야할 Hash Table 의 모든 것!](https://www.youtube.com/watch?v=HraOg7W3VAM&list=PL7jH19IHhOLMdHvl3KBfFI70r9P0lkJwL&index=6)
 [[자료구조 알고리즘] 해쉬테이블(Hash Table)에 대해 알아보고 구현하기](https://www.youtube.com/watch?v=Vi0hauJemxA)

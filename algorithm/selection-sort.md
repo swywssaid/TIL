@@ -1,4 +1,9 @@
 # **Selection Sort**
+- [**Selection Sort**](#selection-sort)
+  - [**1. Selection Sort (선택 정렬)**](#1-selection-sort-선택-정렬)
+  - [**2. Selection Sort VS Bubble Sort**](#2-selection-sort-vs-bubble-sort)
+
+<br /><br />
 
 ## **1. Selection Sort (선택 정렬)**
 - 배열에서 최소 요소(오름차순 기준)를 선택하여 올바른 위치에 배치하는 정렬 알고리즘이다.
@@ -43,14 +48,14 @@ selectionSort(arr)
 ## **2. Selection Sort VS [Bubble Sort](https://github.com/swywssaid/TIL/blob/main/algorithm/bubble-sort.md#bubble-sort)**
 <br />
 
-|선택정렬|버블정렬|
-|:--------|-------:|
-|선택 정렬은 배열에서 최소 요소를 선택하여 올바른 위치에 배치하는 정렬 알고리즘입니다.|버블 정렬은 두 요소를 확인하고 올바른 위치에서 교환하는 정렬 알고리즘입니다.|
-|최상의경우 시간복잡도는 $O(N^2)$ |최상의경우 시간복잡도는 $O(N)$ |
-|최악의경우 시간복잡도는 $O(N^2)$ |최악의경우 시간복잡도는 $O(N^2)$ |
-|선택방법|교환방법|
-|효율적인 분류 기술|비효율적 분류 기술|
-|더 빠름|더 느림|
+| 선택정렬                                                                              |                                                                     버블정렬 |
+| :------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------: |
+| 선택 정렬은 배열에서 최소 요소를 선택하여 올바른 위치에 배치하는 정렬 알고리즘입니다. | 버블 정렬은 두 요소를 확인하고 올바른 위치에서 교환하는 정렬 알고리즘입니다. |
+| 최상의경우 시간복잡도는 $O(N^2)$                                                      |                                               최상의경우 시간복잡도는 $O(N)$ |
+| 최악의경우 시간복잡도는 $O(N^2)$                                                      |                                             최악의경우 시간복잡도는 $O(N^2)$ |
+| 선택방법                                                                              |                                                                     교환방법 |
+| 효율적인 분류 기술                                                                    |                                                           비효율적 분류 기술 |
+| 더 빠름                                                                               |                                                                      더 느림 |
 
 <br />
 
@@ -58,7 +63,7 @@ selectionSort(arr)
   
 <br /><br />
 
-## **Reference**  
+## **Reference**<!-- omit in toc -->  
 [Selection Sort Algorithm](https://www.geeksforgeeks.org/selection-sort/?ref=gcse)
 
 [Selection Sort VS Bubble Sort](https://www.geeksforgeeks.org/selection-sort-vs-bubble-sort/?ref=gcse)

@@ -1,5 +1,15 @@
 # **Algorithm Efficiency**
 
+- [**Algorithm Efficiency**](#algorithm-efficiency)
+  - [**1. 알고리즘의 성능**](#1-알고리즘의-성능)
+  - [**2. 점근적 표기법**](#2-점근적-표기법)
+    - [**2.1. Big-O notation (빅 오 표기법)**](#21-big-o-notation-빅-오-표기법)
+    - [**2.2. Big-Ω notation (빅 오메가 표기법)**](#22-big-ω-notation-빅-오메가-표기법)
+    - [**2.3. Big-θ notation (빅 세타 표기법)**](#23-big-θ-notation-빅-세타-표기법)
+    - [**2.4. 그렇다면 무엇을 사용하면 좋을까**](#24-그렇다면-무엇을-사용하면-좋을까)
+
+<br /><br />
+
 ## **1. 알고리즘의 성능**
 - 단순한 속도로 비교하기엔 하드웨어의 차이가 있다.
 - 알고리즘의 실행 시간은 크게 두 부분으로 나눠 생각한다.  
@@ -63,7 +73,7 @@ $if\quad k_1 * f(n) \leq g(n) \leq k_2 * f(n) \ \rightarrow \ θ(f(n)) \quad\qua
 
 <br /><br />
 
-## **Reference**
+## **Reference**<!-- omit in toc -->
 [Understanding Big-O Notation With JavaScript](https://dev.to/b0nbon1/understanding-big-o-notation-with-javascript-25mc)
 
 [빅오 표기법(Big-O notation), 시간복잡도, 공간복잡도](https://blog.naver.com/PostView.naver?blogId=kks227&logNo=220769859177&parentCategoryNo=&categoryNo=299&viewDate=&isShowPopularPosts=false&from=postList)

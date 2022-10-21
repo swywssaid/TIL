@@ -6,5 +6,3 @@
 
 ## Reference
 [탐욕적 기법(Greedy Algorithm)](https://blog.naver.com/PostView.naver?blogId=kks227&logNo=220775134486&parentCategoryNo=&categoryNo=299&viewDate=&isShowPopularPosts=false&from=postList)
-
-

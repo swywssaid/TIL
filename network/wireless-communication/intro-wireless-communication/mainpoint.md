@@ -140,7 +140,7 @@
    - 2비트(start&stop bit)를 추가로 전송하기 때문에 전송효율 낮음.
    - 상대적으로 낮은 속도로 운영되는 소형컴퓨터와 주변기기에서 사용.
    - 대표적인 예로 ASCII코드의 전송(7비트)
-   <img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\Asynchronous.png" width="600" height="330">
+   <img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\asynchronous.png" width="600" height="330">
 
 <br />
 

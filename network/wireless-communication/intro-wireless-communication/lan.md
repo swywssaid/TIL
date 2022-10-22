@@ -73,7 +73,7 @@
   4. 상위계층에 전달
 
 - 물리계층 : 비트단위 전송, 전송매체 및 LAN 형태 지정
-<img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\LAN.png" width="600" height="330">
+<img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\lan\lan.png" width="600" height="330">
 
 <br /><br />
 
@@ -121,7 +121,7 @@
 - 한곳에 모여있는 LAN들을 연결, 단일 LAN으로도 이용
 - 100Mbps의 전송속도를 제공하는 이중 링 구조
 - 점대점으로 연결
-<img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\fddi.png" width="600" height="330">
+<img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\lan\fddi.png" width="600" height="330">
 
 <br /><br />
 

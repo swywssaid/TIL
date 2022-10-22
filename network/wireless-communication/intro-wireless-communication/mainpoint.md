@@ -75,7 +75,7 @@
 - 하나의 MSC는 여러 개의 LA를 관장함.
 - 하나의 LA는 여러 개의 BS로 구성됨.
 - 하나의 MSC는 하나의 DB(HLR,VLR)를 갖는다.
-<img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\mainpoint\cellular.png" width="600" height="330">
+<img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\mobile-communication\mobile-communication-architecture.png" width="600" height="330">
 
 <br /><br />
 

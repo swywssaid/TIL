@@ -207,7 +207,8 @@
 - 여러 경로를 통해 들어오는 정보의 흐름을 모으는 다중화 기능을 가진 장비를 **다중화장치(multiplexer, MUX)** 라 한다.
 - 다중화된 정보를 다시 여러 가닥으로 갈라주는 기능을 가진 장비를 **역다중화장치(demultiplexer, DEMUX)** 라 한다.
 - 다중화 방법에는 **주파수분할다중화(Frequency Division MultiPlexing, FDM)**, **시분할다중화(Time Division Multiplexing, TDM)** 등이 있다.
-   <img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\multiplexer.png" width="600" height="330">
+
+<img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\multiplexer.png" width="600" height="330">
 
 <br /><br />
 
@@ -222,6 +223,7 @@
 <br /><br />
 
 **패킷교환방식(Packet Switching)**
+
 **패킷**
 - 패킷이란 데이터와 목적지 주소를 포함한 일정형식의 데이터블록.
 <img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\packet-switching.png" width="600" height="150">
@@ -318,7 +320,7 @@
 
 **라우팅(Routing)**
 - 노드 사이의 경로를 설정함.
-- 세 가지 라우팅 방법
+  네 가지 라우팅 방법
   1. Flooding(플러딩)
      - 각 노드가 전송받는 링크를 제외한 나머지 모든 링크로 그 패킷을 복사하여 보내는 방식
      - 모든 노드에게 급히 알려야 하는 제어용 패킷전송과 같은 특수한 용도에 이용.
@@ -333,7 +335,7 @@
         1. 정보수집과정에서 전담노드에 이동량이 집중돼 주위 경로 혼잡
         2. 최적경로계산과 배포 과정 오래걸림.
         3. 전담노드 고장 시 시스템 마비 위험.
-  1. Distributed(분산형 방식)
+  3. Distributed(분산형 방식)
      - 각 노드는 주변상황 정보를 이웃노드와 주기적으로 주고 받아 각자의 경로설정표 갱신.
      - 장점:
         1. 시스템 상황이 바뀌지 않는다면 반복적 수정은 최적경로로 구성됨. 
@@ -342,7 +344,7 @@
      - 단점:
         1. 노드의 고장 시 모든 노드에게 문제점을 알리기 위해선 많은 수정 반복을 해야 함.
         2. 이때 상황변화 발생하면 최적경로로 수렴 어려움.       
-  2. Hierarchical(계층화 방식) 
+  4. Hierarchical(계층화 방식) 
       - 노드를 계층별로 분류
       - 각 노드에서 경로설정 계층적 처리.
       - 공중교환전화망(PSTN)에서 사용.
@@ -433,7 +435,12 @@
 <br /><br />
 
 ### **5.4. 고속이더넷이 FDDI나 DQDB보다 널리 보급된 주된 이유**
-
+**FDDI&DQDB**
+- 상대적으로 초기설치비용 높다.
+  
+**고속이더넷**
+- 기존 이더넷과 호환성 좋음.
+- 설치 간편.
 <br /><br />
 
 ## **Reference** <!-- omit in toc -->

@@ -159,6 +159,7 @@
 ### **3.2. 비동기식 전송과 동기식 전송**
 **비동기식 전송(Asynchronous Transmission)** 
    - start bit + 7bit character + 1bit parity + stop bit
+     - parity bit: 7비트 ASCII코드에 에러확인 비트
    - frame = character + start/stop bit
    - 문자(character)단위의 비트블록이 전송 기본 단위
    - 2비트(start&stop bit)를 추가로 전송하기 때문에 전송효율 낮음.
@@ -173,6 +174,7 @@
 - 프레임(Frame)은 정보비트부분과 제어비트부분으로 구성
 - 비트단위 동기화 $\rightarrow$ 프레임 전체 동기화  
 - frame = pre-amble bit pattern + data + post-amble bit pattern
+ <img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\async-sync.png" width="600" height="300">
 
 <br /><br />
 

@@ -1,0 +1,17 @@
+const fs = require("fs");
+let input = fs
+  .readFileSync(__dirname + "/input.txt")
+  .toString()
+  .trim()
+  .split("\n");
+
+const n = Number(input.shift());
+const dp = input[0].split(" ").map(Number);
+
+for (let i = 1; i < n; i++) {
+  console.log(dp[i], dp[i - 1] + dp[i]);
+  dp[i] = Math.max(dp[i], dp[i - 1] + dp[i]);
+  console.log(dp[i]);
+}
+
+console.log(Math.max(...dp));

@@ -158,10 +158,11 @@
 
 ### **3.2. 비동기식 전송과 동기식 전송**
 **비동기식 전송(Asynchronous Transmission)** 
+   - 문자(character)단위의 비트블록이 전송 기본 단위
+   - 송수신측과 동기화를 위해 start/stop 비트 사용.
    - start bit + 7bit character + 1bit parity + stop bit
      - parity bit: 7비트 ASCII코드에 에러확인 비트
    - frame = character + start/stop bit
-   - 문자(character)단위의 비트블록이 전송 기본 단위
    - 2비트(start&stop bit)를 추가로 전송하기 때문에 전송효율 낮음.
    - 상대적으로 낮은 속도로 운영되는 소형컴퓨터와 주변기기에서 사용.
    - 대표적인 예로 ASCII코드의 전송(7비트)

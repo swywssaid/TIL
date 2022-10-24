@@ -174,7 +174,6 @@
 - 프레임(Frame) 비트블록을 전송하고 블록 구성형태에 따라 문자중심전송과 비트중심전송으로 구분.
 - 프레임(Frame)은 정보비트부분과 제어비트부분으로 구성
 - 비트단위 동기화 $\rightarrow$ 프레임 전체 동기화  
-- frame = pre-amble bit pattern + data + post-amble bit pattern
  <img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\data-communication\async-sync.png" width="600" height="300">
 
 <br /><br />

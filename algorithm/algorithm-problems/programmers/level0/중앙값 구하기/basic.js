@@ -1,10 +1,18 @@
 function solution(array) {
-  array.foreach((x) => {
-    array.find((Math.min(...array), index));
-  });
-  return array[Math.floor(array.length / 2)];
+  let sortedArr = [];
+  while (array.length) {
+    let minNum = array[0];
+    for (let j = 1; j < array.length; j++) {
+      if (array[j] < minNum) minNum = array[j];
+    }
+    sortedArr.push(minNum);
+    array.splice(array.indexOf(minNum), 1);
+  }
+
+  return sortedArr[Math.floor(sortedArr.length / 2)];
 }
 
+solution([1, 2, 4, -1, 0, 3]);
 /*
 1. 최솟값 찾는다
 2. 새 배열에 최솟값넣는다.

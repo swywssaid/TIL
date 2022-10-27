@@ -17,6 +17,7 @@
 ## 그리디 알고리즘 문제
 - 10원, 50원, 100원, 500원으로 금액 표현하기
 - [boj4796 캠핑](https://www.acmicpc.net/problem/4796)
+- [boj1449 수리공 항승](https://www.acmicpc.net/problem/1449)
 
 ## Reference
 [탐욕적 기법(Greedy Algorithm)](https://blog.naver.com/PostView.naver?blogId=kks227&logNo=220775134486&parentCategoryNo=&categoryNo=299&viewDate=&isShowPopularPosts=false&from=postList)

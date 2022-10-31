@@ -1,12 +1,45 @@
-# Main point
+Main point
 
-## 통신 프로토콜과 네트워크 계층구조
-### OSI 참조모형
+- [1. 통신 프로토콜과 네트워크 계층구조](#1-통신-프로토콜과-네트워크-계층구조)
+  - [1.1. OSI 참조모형](#11-osi-참조모형)
+    - [1.1.1. 7계층 계층의 기능](#111-7계층-계층의-기능)
+  - [1.2. TCP/IP 프로토콜](#12-tcpip-프로토콜)
+    - [1.2.1. 4계층 계층의 기능](#121-4계층-계층의-기능)
+  - [1.3. 7계층 vs 4계층](#13-7계층-vs-4계층)
+- [2. LAN](#2-lan)
+  - [2.1. LAN](#21-lan)
+  - [2.2. IEEE 802 표준](#22-ieee-802-표준)
+    - [2.2.1. LLC (Logical Link Control)](#221-llc-logical-link-control)
+    - [2.2.2. MAC (Medium Access Control, 매체 접근 제어)](#222-mac-medium-access-control-매체-접근-제어)
+  - [2.3. CSMA/CD](#23-csmacd)
+  - [2.4. 10기가 비트 이더넷](#24-10기가-비트-이더넷)
+  - [2.5. 스위치 (Switch)](#25-스위치-switch)
+- [3. MAN (Metropolitan Area Network)](#3-man-metropolitan-area-network)
+  - [3.1. MAN 토폴로지(Topology)](#31-man-토폴로지topology)
+    - [3.1.1. DQDB(Distributed Queue Dual Bus)](#311-dqdbdistributed-queue-dual-bus)
+      - [3.1.1.1. 이중버스 구조](#3111-이중버스-구조)
+      - [3.1.1.2. 분산 큐 구조](#3112-분산-큐-구조)
+      - [3.1.1.3. DQDB의 프레임](#3113-dqdb의-프레임)
+      - [3.1.1.4. DQDB (Distributed Queue Dual Bus)의 동작 과정](#3114-dqdb-distributed-queue-dual-bus의-동작-과정)
+  - [3.2. 메트로 이더넷 (Metro Ethernet)](#32-메트로-이더넷-metro-ethernet)
+- [4. 무선랜 (WLAN, Wireless LAN)](#4-무선랜-wlan-wireless-lan)
+  - [4.1. 무선랜 기술](#41-무선랜-기술)
+    - [4.1.1. CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)](#411-csmaca-carrier-sense-multiple-access-with-collision-avoidance)
+    - [4.1.2. 대역확산 통신방식(Spread-Spectrum Technology)](#412-대역확산-통신방식spread-spectrum-technology)
+    - [4.1.3. OFDM (Orthogonal Frequency Division Multiplexing: 직교 주파수 분할 다중화 방식)](#413-ofdm-orthogonal-frequency-division-multiplexing-직교-주파수-분할-다중화-방식)
+    - [4.1.4. MIMO (Multi-Input Multi-Output, 다중 입출력 안테나)](#414-mimo-multi-input-multi-output-다중-입출력-안테나)
+- [5. 광 네트워크 (Optic Network)](#5-광-네트워크-optic-network)
+  - [5.1. 다중화](#51-다중화)
+    - [5.1.1. 다중화 종류](#511-다중화-종류)
+  - [5.2. SONET(Synchronous Optical NETwork)과 SDH(Synchronous Digital Hierarchy)](#52-sonetsynchronous-optical-network과-sdhsynchronous-digital-hierarchy)
+
+**## 1. 통신 프로토콜과 네트워크 계층구조**
+**### 1.1. OSI 참조모형**
 - 컴퓨터 간 패킷 통신을 위해 거쳐야하는 7계층
 
 <br />
 
-#### 7계층 계층의 기능
+**#### 1.1.1. 7계층 계층의 기능**
 |       |      계층      |                    기능                     |
 | :---: | :------------: | :-----------------------------------------: |
 | 7계층 |    응용계층    |           응용프로세스간 정보교환           |
@@ -19,7 +52,7 @@
 
 <br /><br />
 
-### TCP/IP 프로토콜
+**### 1.2. TCP/IP 프로토콜**
 **IP (Internet Protocol)** 
 - 패킷 데이터들을 최대한 빨리 특정 목적지 주소로 보내는 프로토콜
   - 패킷 전달 여부를 보증하지 않으며, 패킷을 보낸 순서와 받는 순서가 다를 수 있습니다. (빨리 보내는게 목적이기 때문에)
@@ -40,7 +73,7 @@
 
 <br /><br />
 
-#### 4계층 계층의 기능
+**#### 1.2.1. 4계층 계층의 기능**
 |       |        계층        |                       기능                       |
 | :---: | :----------------: | :----------------------------------------------: |
 | 4계층 |      응용계층      |             응용프로세스간 정보교환              |
@@ -50,13 +83,13 @@
 
 <br /><br />
 
-### 7계층 vs 4계층
+**### 1.3. 7계층 vs 4계층**
 <img src="..\..\image\network\computer-network\layer.png" width="600" height="330">
 
 <br /><br />
 
-## LAN
-### LAN
+**## 2. LAN**
+**### 2.1. LAN**
 - 제한된 거리에 있는 다수의 독립된 컴퓨터 기기 간 데이터 통신 시스템
 
 <br />
@@ -74,18 +107,18 @@
 
 <br /><br />
 
-### IEEE 802 표준
+**### 2.2. IEEE 802 표준**
 - 많은 네트워크 장비 공급 업체들로부터 출시되는 관련 장비들간의 호환성 및 장비간 연동을 위하여 IEEE(전기 전자 전문가 협회)는 802 위원회를 조직하여, LAN에 관한 표준화를 추진함
 <img src="..\..\image\network\computer-network\iee802.png" width="600" height="330">
 
 <br /><br />
 
-#### LLC (Logical Link Control)
+**#### 2.2.1. LLC (Logical Link Control)**
 - 상위 계층인 네트워크 계층과 LAN의 MAC 계층을 연결해 주는 인터페이스
 
 <br /><br />
 
-#### MAC (Medium Access Control, 매체 접근 제어)
+**#### 2.2.2. MAC (Medium Access Control, 매체 접근 제어)**
 - LAN에서 하나의 통신 회선을 여러 단말장치들이 원활하게 공유할 수 있도록 해주는 통신 회선에 대한 접근 방식
 
 <br />
@@ -108,7 +141,7 @@
 
 <br /><br />
 
-### CSMA/CD
+**### 2.3. CSMA/CD**
 **CSMA/CD(Carrier Sense multiple Access with Collision Detection)**
 - 스테이션이 채널의 상태를 감지해 충돌을 피하는 매체 접근 방식.
   - Xerox사가 동축케이블을 매체로 하는 LAN으로 개발
@@ -131,7 +164,7 @@
 
 <br /><br />
 
-### 10기가 비트 이더넷
+**### 2.4. 10기가 비트 이더넷**
 - 전이중 방식만 지원
 - 10Gbps 전송 속도 지원을 위해 광케이블과 동축케이블 사용 권장.
 - 기존의 이더넷과의 호환 용이.
@@ -155,7 +188,7 @@
 
 <br /><br />
 
-### 스위치 (Switch)
+**### 2.5. 스위치 (Switch)**
 **스위칭 방법에 따른 분류**
 - Store-and-Forward 스위치
   - 프레임을 전송하기 전에 전체 프레임을 수신하는 방식으로 기존의 브리지와 거의 같은 방식으로 스위칭
@@ -167,7 +200,7 @@
 
 <br /><br />
 
-## MAN (Metropolitan Area Network)
+**## 3. MAN (Metropolitan Area Network)**
 - 대도시에 산재해 있는 기업과 가정 등의 가입자들을 연결하는 망구조
   - LAN과 WAN의 중간 크기
   - LAN과 LAN을 연결
@@ -179,7 +212,7 @@
 
 <br /><br />
 
-### MAN 토폴로지(Topology)
+**### 3.1. MAN 토폴로지(Topology)**
 - LAN과 LAN을 효과적으로 연결하고, LAN들 간의 원활한 통신을 제공하기 위한 배치 혹은 연결 방식
   - DQDB(Distributed Queue Dual Bus)
     - MAN의 대표적인 토폴로지
@@ -188,12 +221,12 @@
 
 <br /><br />
 
-#### DQDB(Distributed Queue Dual Bus)
+**#### 3.1.1. DQDB(Distributed Queue Dual Bus)**
 - 이중버스형태로 구성되어 있으며, 분산 큐라고 하는 큐잉 방식을 이용하여 준비 큐에 데이터를 삽입하고 자기 차례가 되었을 때 데이터를 전송하는 이더넷 구조
 
 <br />
 
-##### 이중버스 구조
+**##### 3.1.1.1. 이중버스 구조**
 - 스트림
   - BUS A에서 노드 A는 노드 B의 하향 스트림
   - BUS B에서 노드 A는 노드 B의 상향 스트림
@@ -207,7 +240,7 @@
 
 <br />
 
-##### 분산 큐 구조
+**##### 3.1.1.2. 분산 큐 구조**
 - 대역폭 감소로 인한 기아 현상을 방지하기 위해 제안된 데이터 전송 기법
 - 각 노드는 자신이 연결된 각 버스당 하나씩의 큐를 생성
 - 해당 버스를 지나는 슬롯 내에 예약정보가 오면 큐에 삽입
@@ -224,7 +257,7 @@
 
 <br />
 
-##### DQDB의 프레임
+**##### 3.1.1.3. DQDB의 프레임**
 - **B(Busy)**: 슬롯 내부에 데이터의 유무를 나타냄
 - ST(Slot Type): 전송 슬롯의 두 가지 유형을 나타냄 
 - **R(Reservation)**: 슬롯을 예약하기 위해 사용하는 비트 
@@ -234,7 +267,7 @@
 
 <br />
 
-##### DQDB (Distributed Queue Dual Bus)의 동작 과정
+**##### 3.1.1.4. DQDB (Distributed Queue Dual Bus)의 동작 과정**
 1. 그림의 (a): 버스B의 슬롯 생성기에서 생성된 슬롯에 노드B가 예약되어 R비트를 설정함: 이 과정은 노드B가 버스A를 통해서 자신의 데이터를 전송하는 것을 의미함.
 2. 노드B는 자신이 슬롯을 예약하여 R비트를 설정한 반대 편 큐에 자신이 전송할 차례임을 알림
 3. 그림의 (b): 그림(b)에서 버스 B의 슬롯은 노드A를 지남. 노드A는 슬롯을 전송 받아 예약 비트가 설정되어 있는 것을 확인하고 다음 반대편 큐에 그 사실을 알림.
@@ -247,21 +280,21 @@
 
 <br /><br />
 
-### 메트로 이더넷 (Metro Ethernet)
+**### 3.2. 메트로 이더넷 (Metro Ethernet)**
 - MAN이 가지고 있는 여러 가지 문제점들을 해결하면서 고속의 광대역 망 서비스를 제공하기 위해
 - 이더넷 프로토콜을 사용
 - 패킷 교환 방식
 
 <br /><br />
 
-## 무선랜 (WLAN, Wireless LAN)
+**## 4. 무선랜 (WLAN, Wireless LAN)**
 - 기존 네트워크 케이블이나 전화선 등 케이블 대신에 전파를 이용해 컴퓨터 간 네트워크를 구축하는 방식
   - IEEE802.11 기술규격의 브랜드 명이 wireless fidelity이며, 줄여서 Wi-Fi(와이파이), 즉 와이파이는 무선랜의 일종.
 
 <br /><br />
 
-### 무선랜 기술
-#### CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)
+**### 4.1. 무선랜 기술**
+**#### 4.1.1. CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)**
 - 전송을 원하는 노드가 데이터를 전송하기 전에 먼저 네트워크 사용 여부를 검사하여 사용 중이면 임의의 설정 시간만큼 대기한 후에 다시 전송하는 방법
   - 데이터에 우선순위를 할당할 수 없음.
   - 충돌 발생 시 상위계층에서 이를 처리해야함.
@@ -275,7 +308,7 @@
 
 <br /><br />
 
-#### 대역확산 통신방식(Spread-Spectrum Technology)
+**#### 4.1.2. 대역확산 통신방식(Spread-Spectrum Technology)**
 **DSSS (Direct Sequence Spread Spectrum, 직접확산방식)**
 - 정보 데이터 신호의 주파수 대역폭보다 훨씬 넓은 대역폭을 갖는 확산코드(PN Code)를 사용해서 정보 데이터 신호를 변조하여 주파수 대역을 확산한 후에 전송하는 통신 방식
   - DSSS방식은 고속 데이터 전송 시 칩 간 간섭의 증가로 하드웨어의 복잡도가 증가함
@@ -289,7 +322,7 @@
 
 <br /><br />
 
-#### OFDM (Orthogonal Frequency Division Multiplexing: 직교 주파수 분할 다중화 방식)
+**#### 4.1.3. OFDM (Orthogonal Frequency Division Multiplexing: 직교 주파수 분할 다중화 방식)**
 - 고속의 송신 신호를 다수의 직교(Orthogonal)하는 협대역 반송파로 다중화시키는 변조 방식
   - DSSS, FHSS 문제점 해결. 
   - 상호 직교성을 갖는 분할된 여러 개의 반송파를 사용하여 주파수 효율이 뛰어남. 
@@ -301,14 +334,14 @@
 
 <br /><br />
 
-#### MIMO (Multi-Input Multi-Output, 다중 입출력 안테나)
+**#### 4.1.4. MIMO (Multi-Input Multi-Output, 다중 입출력 안테나)**
 - 기지국과 단말기에 여러 안테나를 사용하여 사용된 안테나 수에 비례하여 용량을 높이는 기술
   - 기지국에 M개 단말기에 N개를 설치할 경우, min(M,N)만큼 평균 통신 용량이 증가.
   - 기지국과 단말기의 수에 따라 MIMO, MISO, SIMO, SISO로 분류됨
 
 <br /><br />
 
-## 광 네트워크 (Optic Network)
+**## 5. 광 네트워크 (Optic Network)**
 
 - 광 케이블을 이용한 대표적인 네트워크 구조
   - SONET/SDH 망 구조
@@ -317,7 +350,7 @@
 
 <br /><br />
 
-### 다중화
+**### 5.1. 다중화**
 - 대규모 통신시스템에서는 그림과 같이 적은 용량만을 필요로 하는 여러 가닥의 정보 흐름을 하나의 용량이 큰 전송선으로 전송하는 방법을 **다중화(multiplexing)** 라고 한다.
   - 중앙컴퓨터와 다수의 원격지 단말들을 각각 전용 전송선으로 연결한다면 비용면에서 매우 비효율적.
   - 여러 경로를 통해 들어오는 정보의 흐름을 모으는 다중화 기능을 가진 장비를 **다중화장치(multiplexer, MUX)** 라 한다.
@@ -326,7 +359,7 @@
 
 <br /><br />
 
-#### 다중화 종류
+**#### 5.1.1. 다중화 종류**
 - FDM(Frequency Division MultiPlexing, 주파수분할다중화)
 - TDM(Time Division Multiplexing, 시분할다중화)
 - CDM(Code-Division Multiplexing, 코드분할다중화)
@@ -338,7 +371,7 @@
 
 <br /><br />
 
-### SONET(Synchronous Optical NETwork)과 SDH(Synchronous Digital Hierarchy)
+**### 5.2. SONET/SDH(Synchronous Optical NETwork/Synchronous Digital Hierarchy)**
 - 단일 파장만을 사용
 - 대역폭을 확장하기 위해서는 새로운 시스템을 다시 설치해야 하는 제약
 

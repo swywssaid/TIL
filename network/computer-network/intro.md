@@ -212,6 +212,9 @@ Main point
   - 롱홀은 백본 망과 메트로 엑세스 구간을 연결시켜주는 기능을 수행
      즉, 가입자 망을 백본망으로 연결해 주는 기능 수행
 
+>백본(backbone) 또는 백본망(backbone network, 중추망)  
+은 다양한 네트워크를 상호 연결하는 컴퓨터 네트워크.
+
 <br /><br />
 
 ### **3.1. MAN 토폴로지(Topology)**
@@ -383,3 +386,5 @@ Main point
 [10 Gigabit Ethernet Physical Layer | 10 Gigabit Ethernet PHY basics](https://www.rfwireless-world.com/Articles/10-Gigabit-Ethernet-Physical-Layer.html)
 
 [Network topology](https://en.wikipedia.org/wiki/Network_topology)
+
+[백본망](https://ko.wikipedia.org/wiki/%EB%B0%B1%EB%B3%B8%EB%A7%9D)

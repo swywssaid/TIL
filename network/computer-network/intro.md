@@ -33,6 +33,8 @@ Main point
     - [**5.1.1. 다중화 종류**](#511-다중화-종류)
   - [**5.2. SONET/SDH(Synchronous Optical NETwork/Synchronous Digital Hierarchy)**](#52-sonetsdhsynchronous-optical-networksynchronous-digital-hierarchy)
 
+<br /><br />
+
 ## **1. 통신 프로토콜과 네트워크 계층구조**
 ### **1.1. OSI 참조모형**
 - 컴퓨터 간 패킷 통신을 위해 거쳐야하는 7계층

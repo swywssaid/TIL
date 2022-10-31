@@ -24,7 +24,7 @@ Main point
   - [**3.2. 메트로 이더넷 (Metro Ethernet)**](#32-메트로-이더넷-metro-ethernet)
 - [**4. 무선랜 (WLAN, Wireless LAN)**](#4-무선랜-wlan-wireless-lan)
   - [**4.1. 무선랜 기술**](#41-무선랜-기술)
-    - [4.1.1. CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)**](#411-csmaca-carrier-sense-multiple-access-with-collision-avoidance)
+    - [**4.1.1. CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)**](#411-csmaca-carrier-sense-multiple-access-with-collision-avoidance)
     - [**4.1.2. 대역확산 통신방식(Spread-Spectrum Technology)**](#412-대역확산-통신방식spread-spectrum-technology)
     - [**4.1.3. OFDM (Orthogonal Frequency Division Multiplexing: 직교 주파수 분할 다중화 방식)**](#413-ofdm-orthogonal-frequency-division-multiplexing-직교-주파수-분할-다중화-방식)
     - [**4.1.4. MIMO (Multi-Input Multi-Output, 다중 입출력 안테나)**](#414-mimo-multi-input-multi-output-다중-입출력-안테나)
@@ -296,7 +296,7 @@ Main point
 <br /><br />
 
 ### **4.1. 무선랜 기술**
-#### 4.1.1. CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)**
+#### **4.1.1. CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)**
 - 전송을 원하는 노드가 데이터를 전송하기 전에 먼저 네트워크 사용 여부를 검사하여 사용 중이면 임의의 설정 시간만큼 대기한 후에 다시 전송하는 방법
   - 데이터에 우선순위를 할당할 수 없음.
   - 충돌 발생 시 상위계층에서 이를 처리해야함.

@@ -110,6 +110,8 @@
 
 ## 1.6. Reference <!-- omit in toc -->
 
+[비전공자를 위한 HTML/CSS](https://www.boostcourse.org/cs120/joinLectures/33340?isDesc=false)
+
 [Void element](https://developer.mozilla.org/en-US/docs/Glossary/Void_element)
 
 

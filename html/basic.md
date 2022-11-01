@@ -1,16 +1,22 @@
-# 1. Basic
+HTML Basic
 
+- [1. HTML (Hyper Text Markup Language)](#1-html-hyper-text-markup-language)
+- [1.1. 속성](#11-속성)
+- [1.2. 빈 태그(Empty Tag)](#12-빈-태그empty-tag)
+- [1.3. 공백](#13-공백)
+- [1.4. 주석(comment tags)](#14-주석comment-tags)
+- [1.5. HTML 문서의 기본구조](#15-html-문서의-기본구조)
+  - [1.5.1. `<!doctype>`](#151-doctype)
+  - [1.5.2. `<html>`](#152-html)
+  - [1.5.3. `<head>`](#153-head)
+  - [1.5.4. `<body>`](#154-body)
 
-- [1. Basic](#1-basic)
-  - [1.1. 속성](#11-속성)
-  - [1.2. 빈 태그(Empty Tag)](#12-빈-태그empty-tag)
-  - [1.3. 공백](#13-공백)
-  - [1.4. 주석(comment tags)](#14-주석comment-tags)
-  - [1.5. HTML 문서의 기본구조](#15-html-문서의-기본구조)
-    - [1.5.1. `<!doctype>`](#151-doctype)
-    - [1.5.2. `<html>`](#152-html)
-    - [1.5.3. `<head>`](#153-head)
-    - [1.5.4. `<body>`](#154-body)
+<br><br>
+
+## 1. HTML (Hyper Text Markup Language)
+- HTML은 Hyper Text Markup Language의 줄임말
+  - Hyper Text는 단순한 텍스트를 넘어서 웹 페이지의 특정 부분과 연결할 수 있는 기능을 가진 텍스트 즉, 링크
+  - Markup Language는 프로그래밍 언어의 한 종류로 정보를 구조적, 계층적으로 표현 가능하다는 특징
 
 <br><br>
 

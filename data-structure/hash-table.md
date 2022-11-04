@@ -29,7 +29,7 @@
   2. 해쉬 코드를 인덱스로 변환
   3. 인덱스에 있는 값 서칭
 
-<img src="..\image\algorithm\hash-table\hash-table.png" width="600" height="330">
+<img src="..\image\data-structure\hash-table\hash-table.png" width="600" height="330">
 
 <br />
 
@@ -41,7 +41,7 @@
   - 서로 다른 해쉬 코드 $\rightarrow$ 같은 인덱스
   >$\because$ 배열 방이 한정되어 있기 때문에 같은 인덱스를 부여하게 된다.
 - 해쉬 충돌 시 배열 내에서 찾고자 하는 키 값을 검색한다. 따라서 모든 해쉬태이블의 시간복잡도가 $O(1)$ 인건 아니다. 최악의 경우 $O(n)$ 이 발생한다.
-  <img src="..\image\algorithm\hash-table\collision.png" width="600" height="330">
+  <img src="..\image\data-structure\hash-table\collision.png" width="600" height="330">
 
 >해쉬 태이블의 성능은 해쉬 알고리즘이 해쉬 태이블에 얼마나 골고루 잘 분배하는 지에 따라 결정된다.
 

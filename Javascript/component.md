@@ -1,7 +1,8 @@
 # 컴포넌트 <!-- omit in toc -->
 
 ## 컴포넌트와 상태관리
-
+- 상태관리
+- 컴포넌트
 ## state - setState - render
 
 ## 이벤트 처리

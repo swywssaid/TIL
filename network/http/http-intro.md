@@ -51,7 +51,22 @@
 
 
 ## HTTP 프로토콜 구성
+- 클라이언트의 요청(Request) 메시지
+<img src="..\..\image\network\http\http-intro\request.png" width="600" height="330">
+
+- 서버의 응답(Response) 메시지
+<img src="..\..\image\network\http\http-intro\response.png" width="600" height="330">
+
+
 ## HTTP 프로토콜 특성
+### stateless 특성
+- 상태가 없다 -> 과거정보를 남기지 않는다 -> 새로운 request를 날릴 때 마다 새로운 reponse를 보냄.
+- 상태와 무관하니 확장이 쉽다.
+- 장바구니와 같이 이전 상태의 기억을 원한다면
+  - 쿠키, 세션 같은 기술이 함께 쓰임.
+
+### URI로 리소스 식별
+
 ## HTTP 메서드
 ## HTTP 상태코드
 ## HTTP 메시지

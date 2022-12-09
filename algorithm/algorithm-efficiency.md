@@ -38,6 +38,12 @@ $if\quad g(n) \leq k*f(n) \ \rightarrow \ O(f(n)) \quad\quad\quad    (\ running\
 
 <img src="..\image\algorithm\algorithm-efficiency\big-o.png" width="600" height="330">
 
+> O(logn)  
+n을 2로 나눠 1보다 작아질 때까지의 연산 횟수에 근사한다.  
+특정 검색 알고리즘, 효율적인 정렬 알고리즘, 재귀와 관련이 있다.
+
+
+
 <br /><br />
 
 ### **2.2. Big-Ω notation (빅 오메가 표기법)**

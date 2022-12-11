@@ -74,7 +74,7 @@
 <br><br>
 
 ### 1.5. CT2
-- 기지국이 설치된 실내 또는 옥외에서의 저속 보행이 동중에 발신통화를 가능하게 한다.
+- 기지국이 설치된 실내 또는 옥외에서의 저속 보행 도중에 발신통화를 가능하게 한다.
 - 사용범위를 옥내에서 옥외로 확대시키려는, 일명 텔레포인트(telepoint)서비스를 제공하기 위함.
 - CT1에 비해 옥외사용이 가능하고 디지털이다.
 <img src="..\..\..\image\network\wireless-communication\intro-wireless-communication\intro\ct2.png" width="600" height="330">

@@ -5,7 +5,7 @@
   - [1.2. 하드 핸드오프와 소프트핸드오프](#12-하드-핸드오프와-소프트핸드오프)
   - [1.3. CDMA 시스템의 장점 (아날로그 시스템에 비하여)](#13-cdma-시스템의-장점-아날로그-시스템에-비하여)
   - [1.4. GMPCS(Global Mobile Personal Communications System)](#14-gmpcsglobal-mobile-personal-communications-system)
-  - [1.5. CT2](#15-ct2)
+  - [1.5. CT2 (Cordless Tele-phone2)](#15-ct2-cordless-tele-phone2)
   - [1.6. TRS(주파수공용통신, Trunked Radio System)](#16-trs주파수공용통신-trunked-radio-system)
   - [1.7. 무선호출 (Radio Paging)](#17-무선호출-radio-paging)
   - [1.8. 2G CDMA 시스템의 장, 단점](#18-2g-cdma-시스템의-장-단점)
@@ -73,7 +73,7 @@
 
 <br><br>
 
-### 1.5. CT2
+### 1.5. CT2 (Cordless Tele-phone2)
 - 기지국이 설치된 실내 또는 옥외에서의 저속 보행 도중에 발신통화를 가능하게 한다.
 - 사용범위를 옥내에서 옥외로 확대시키려는, 일명 텔레포인트(telepoint)서비스를 제공하기 위함.
 - CT1에 비해 옥외사용이 가능하고 디지털이다.

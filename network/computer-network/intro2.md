@@ -55,7 +55,6 @@
     - [1.5.3. 인증 방식](#153-인증-방식)
       - [1.5.3.1. Peer-Peer 방식](#1531-peer-peer-방식)
       - [1.5.3.2. 클라이언트-서버(Client/Server) 방식](#1532-클라이언트-서버clientserver-방식)
-  - [1.6. Reference ](#16-reference-)
 
 <br /><br />
 
@@ -578,5 +577,5 @@ Total Host Address count 2046 (Network Address 0, Broadcast 255 제외)
 
 <br><br>
 
-## 1.6. Reference <!--omit in toc -->
+## 1.6. Reference <!-- omit in toc -->
 [TCP와 UDP 차이](https://velog.io/@hidaehyunlee/TCP-%EC%99%80-UDP-%EC%9D%98-%EC%B0%A8%EC%9D%B4)

@@ -11,4 +11,5 @@ function solution(id_pw, db) {
 /*
 이전 상태를 기억할 필요가 없다.
 
+
 */

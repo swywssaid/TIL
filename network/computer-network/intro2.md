@@ -176,7 +176,7 @@
 
 - 할당된 주소범위에서 맨 왼쪽과 오른쪽은 각각 host id가 0과 1이므로 제외하고 할당
 - 6개의 네트워크에 각각 30대의 호스트를 할당함
-<img src="..\..\image\network\computer-network\subnetting4.png"width="600" height="330">
+<img src="..\..\image\network\computer-network\subnetting4.png" width="600" height="330">
 
 | Bitmask (서브넷 마스크로 사용된 1의 개수) | Netmask(255.255.255.x) | 네트워크 수 (서브넷 개수) | 호스트 수 |
 | ----------------------------------------- | ---------------------- | ------------------------- | --------- |

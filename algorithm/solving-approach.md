@@ -109,5 +109,101 @@ function charCout(str) {
 
 <br><br>
 
-## 5단계: 되돌아 보기와 리팩터 (Look Back and Refator) 
+## 5단계: 되돌아 보기와 리팩터 (Look Back and Refactor) 
+- 다른 접근 방식이 있나
+- 한눈에 이해할 수 있나, 직관적인가
+- 결과나 방법을 다른 문제에 적용할 수 있나
+- 코드를 향상시킬 수 있나
+  - 성능의 향상: 주로 시·공간 복잡도 분석
+  - 가독성 향상: 회사 스타일 가이드, 언어 규칙, 간격 등
+- 다른 사람들은 어떻게 해결하는가
 
+```javascript
+function charCout(str) {
+    // 리턴할 객체 생성
+    let result = {};
+    // 문자열 선회 루프
+        for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if (/[a-z0-9]/.test(char)) {
+            // 숫자/문자 && 객체에 키가 있다면, 카운트
+            if (result[char] > 0) result[char]++;
+            // 숫자/문자 && 객체에 카가 없다면, 객체 추가하고 값은 1
+            else result[char] = 1;
+        }
+        }
+    // 객체 반환
+    return result;
+}
+
+// 1. 루프 조건 변화
+function charCout(str) {
+    // 리턴할 객체 생성
+    let result = {};
+    // 문자열 선회 루프
+        for (let char of str) {
+        char = char.toLowerCase();
+        if (/[a-z0-9]/.test(char)) {
+            // 숫자/문자 && 객체에 키가 있다면, 카운트
+            if (result[char] > 0) result[char]++;
+            // 숫자/문자 && 객체에 카가 없다면, 객체 추가하고 값은 1
+            else result[char] = 1;
+        }
+        }
+    // 객체 반환
+    return result;
+}
+
+// 2. if else 단순화
+function charCout(str) {
+    // 리턴할 객체 생성
+    let result = {};
+    // 문자열 선회 루프
+        for (let char of str) {
+        char = char.toLowerCase();
+        if (/[a-z0-9]/.test(char)) {
+            result[char] = ++result[char] || 1;
+        }
+        }
+    // 객체 반환
+    return result;
+}
+
+/* 3. 정규표현식
+면접이라면: 
+이 정규 표현식이 특정 패턴을 확인할 수 있는 빠르고 비교적 짧은 방법이라서 이 경우에 상용하였지만 실제로 얼마나 효율적인지는 잘 모르겠습니다.
+자바스크립트에서는 정규 표현식이 수행 중인 작업과 사용 중인 브라우저에 따라 성능이 달라질 수 있다고 알고 있기 때문입니다.
+따라서 다른 더 좋은 방법이 있을 수 있다고 생각합니다.
+
+정도의 답변을 한다.
+
+여기선 charCodeAt으로 리팩토링을 할 것임.
+"hi".charCodeAt(0) -> 104
+"i".charCodeAt(0) -> 105
+*/
+function charCout(str) {
+    // 리턴할 객체 생성
+    let result = {};
+    // 문자열 선회 루프
+        for (let char of str) {
+        if (isAlphaNumeric(char)) {
+            char = char.toLowerCase();
+            result[char] = ++result[char] || 1;
+        }
+        }
+    // 객체 반환
+    return result;
+}
+
+function isAlphaNumeric(char) {
+    let code = char.charCodeAt(0);
+    if (!(code > 47 && code < 58) && // numeric (0-9)
+            !(code > 64 && code < 91) && // upper alpha (A-Z)
+            !(code > 96 && code < 123)) { // lower alpha (a-z)
+        return false;
+    }
+    return true;
+}
+```
+> 정규 표현식을 사용하면 55% 더 느리다. 하지만 이걸 떠올리라는 말은 아니다. 면접을 마치며 사족을 다는 정도면 됨.
+<img src="..\image\algorithm\solving-approach/charCodeAt-regexp.png" width="200" height="200">  

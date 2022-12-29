@@ -68,7 +68,7 @@
 ```javascript
 function charCout(str) {
     // 무언가 처리한다.
-    // 소문자 키를 지닌 객체를 반환
+    // 소문자 키를 지닌 
 }
 
 function charCout(str) {
@@ -83,6 +83,31 @@ function charCout(str) {
 <br><br>
 
 ## 4단계: 해결 또는 단순화 (Solve/Simplify) 
+- 해결이 바로 되지 않은 문제는 단순화한다.
+  - 다른 모든 것에 집중하기 위해 시간이 많이 소요되는 부분을 무시.
+  - 문제를 시작 조차 못하는 것보다 낫다.
+```javascript
+// 느낌표와 공백 등을 해결하지 못해 이상적이진 않아도 근접하였다.
+// 90% 정도 진행한 채 작은 부분들을 해결할 수 있음.
+function charCout(str) {
+    // 리턴할 객체 생성
+    let result = {};
+    // 문자열 선회 루프
+        for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+             
+        // 숫자/문자 && 객체에 키가 있다면, 카운트
+        if (result[char] > 0) result[char]++;
+        // 숫자/문자 && 객체에 카가 없다면, 객체 추가하고 값은 1
+        else result[char] = 1;
+        }
+        // 문자가 다른 거면, 아무것도 안한다.
+    // 객체 반환
+    return result;
+}
+```
+
+<br><br>
 
 ## 5단계: 되돌아 보기와 리팩터 (Look Back and Refator) 
 

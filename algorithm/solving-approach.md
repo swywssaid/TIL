@@ -1,16 +1,26 @@
 # 문제 해결법 (problem solving approach)
 
-## algorithm
+- [문제 해결법 (problem solving approach)](#문제-해결법-problem-solving-approach)
+  - [1. algorithm](#1-algorithm)
+  - [2. 1단계: 문제의 이해 (Understand the Problem)](#2-1단계-문제의-이해-understand-the-problem)
+    - [2.1. 문제의 이해 과정](#21-문제의-이해-과정)
+  - [3. 2단계: 구체적 예제들 (Explore Concrete Examples)](#3-2단계-구체적-예제들-explore-concrete-examples)
+    - [3.1. 예제의 예제](#31-예제의-예제)
+  - [4. 3단계: 세부 분석 (Break It Down)](#4-3단계-세부-분석-break-it-down)
+  - [5. 4단계: 해결 또는 단순화 (Solve/Simplify)](#5-4단계-해결-또는-단순화-solvesimplify)
+  - [6. 5단계: 되돌아 보기와 리팩터 (Look Back and Refactor)](#6-5단계-되돌아-보기와-리팩터-look-back-and-refactor)
+
+## 1. algorithm
 - 특정 작업을 달성하기 위한 단계나 일련의 과정
 
 <br><br>
 
-## 1단계: 문제의 이해 (Understand the Problem) 
+## 2. 1단계: 문제의 이해 (Understand the Problem) 
 - 문제를 보자 마자 푸는 것은 뭔가 진행이 되는 것처럼 느낄 수 있지만 한 걸음 물러서서 문제를 확실히 이해하는 것은 정말 중요하다.
 
 <br>
 
-### 문제의 이해 과정
+### 2.1. 문제의 이해 과정
 1. 문제를 나만의 방식으로 다시 생각해봐라.
 2. 문제가 어떤 입력값을 받는가.
 3. 문제의 출력값은 무엇인가.
@@ -42,7 +52,7 @@
 ```
 <br><br>
 
-## 2단계: 구체적 예제들 (Explore Concrete Examples) 
+## 3. 2단계: 구체적 예제들 (Explore Concrete Examples) 
 - 예제를 떠올리는 것은 입력값과 출력값을 확인할 수 있다.
 - 예시를 적용하면서 더 많은 정보를 습득할 수 있다.
 - 단위 검사를 수행.
@@ -50,7 +60,7 @@
 
 <br>
 
-### 예제의 예제 
+### 3.1. 예제의 예제 
 - 간단한 예제 2~3개
 - 좀 더 복잡한 예제
 - 빈 입력값
@@ -58,7 +68,7 @@
 
 <br><br>
 
-## 3단계: 세부 분석 (Break It Down) 
+## 4. 3단계: 세부 분석 (Break It Down) 
 - 문제를 세부 단계로 나눠 분석하는 것.
   - 단계의 틀을 잡고 항상 집중할 수 있도록 함.
   - 확신이 들지 않는 문제를 짚을 수 있다.
@@ -82,7 +92,7 @@ function charCout(str) {
 ```
 <br><br>
 
-## 4단계: 해결 또는 단순화 (Solve/Simplify) 
+## 5. 4단계: 해결 또는 단순화 (Solve/Simplify) 
 - 해결이 바로 되지 않은 문제는 단순화한다.
   - 다른 모든 것에 집중하기 위해 시간이 많이 소요되는 부분을 무시.
   - 문제를 시작 조차 못하는 것보다 낫다.
@@ -109,7 +119,7 @@ function charCout(str) {
 
 <br><br>
 
-## 5단계: 되돌아 보기와 리팩터 (Look Back and Refactor) 
+## 6. 5단계: 되돌아 보기와 리팩터 (Look Back and Refactor) 
 - 다른 접근 방식이 있나
 - 한눈에 이해할 수 있나, 직관적인가
 - 결과나 방법을 다른 문제에 적용할 수 있나
@@ -207,3 +217,6 @@ function isAlphaNumeric(char) {
 ```
 > 정규 표현식을 사용하면 55% 더 느리다. 하지만 이걸 떠올리라는 말은 아니다. 면접을 마치며 사족을 다는 정도면 됨.
 <img src="..\image\algorithm\solving-approach/charCodeAt-regexp.png" width="200" height="200">  
+
+## Reference <!-- omit in toc -->
+[JavaScript 알고리즘 & 자료구조 마스터클래스](https://www.udemy.com/course/best-javascript-data-structures/)

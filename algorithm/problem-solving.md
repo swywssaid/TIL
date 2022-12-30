@@ -285,7 +285,56 @@ function solution(str1, str2) {
   }
   return true;
 }
+```
 
+<br><br>
+
+### 다중 포인터 패턴 (Multiple Pointers)
+- 한 쌍의 값이나 조건을 충족시키는 무언가를 찾을 때
+
+```javascript
+let arr1 = [-1,1,2,2,3];
+// *단순한 풀이: 중첩 루프
+// 시간복잡도: O(n^2), 공간복잡도: O(1) 
+function solution(arr1) {
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr1[i] + arr1[j] === 0) return [arr[i], arr[j]]
+        }
+    }
+}
+
+let arr = [-1,1,2,2,3];
+// *왼쪽과 오른쪽 포인터가 가운데로 움직임.
+// 시간복잡도: O(n), 공간복잡도: O(1) 
+function solution(arr) {
+    let left = 0;
+    let right = arr.length - 1
+    while (left < right) {
+        let sum = arr[left] + arr[right];
+        if (sum === 0) {
+            return [arr[left], arr[right]];
+        } else if (sum > 0) {
+            right--;
+        } else {
+            left++;
+        }
+    }
+}
+
+let arr = [-1,1,2,2,3];
+// *고유값을 세는 도전 과제
+
+// 왼쪽에서 두 개의 포인터가 움직임.
+// 시간복잡도: O(n), 공간복잡도: O(1) 
+function countUniqueValues(arr) {
+  if (!arr.length) return 0;
+  let i = 0;
+  for (let j = 1; j < arr.length; j++) {
+    if (arr[j - 1] !== arr[j]) i++;
+  }
+  return i + 1;
+}
 ```
 
 <br><br>

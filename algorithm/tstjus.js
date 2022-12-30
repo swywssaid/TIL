@@ -1,5 +1,6 @@
 let str1 = "anagram";
 let str2 = "nagaram";
+let arr = [1];
 
 // // 중첩 루프 O(n^2)
 // function solution(arr1, arr2) {
@@ -12,18 +13,14 @@ let str2 = "nagaram";
 //     })
 //     .filter((x) => x !== "").length;
 // }
-function solution(str1, str2) {
-  if (str1.length !== str2.length) return false;
-
-  let lookup = {};
-  for (let val of str1) lookup[val] = (lookup[val] || 0) + 1;
-
-  for (let val of str2) {
-    if (!lookup[val]) return false;
-    lookup[val]--;
+function countUniqueValues(arr) {
+  if (!arr.length) return 0;
+  let i = 0;
+  for (let j = 1; j < arr.length; j++) {
+    if (arr[j - 1] !== arr[j]) i++;
   }
-  return true;
+  return i + 1;
 }
-console.log(solution(str1, str2));
+console.log(countUniqueValues(arr));
 // let test = { 2: 3 };
 // console.log(3 in test);

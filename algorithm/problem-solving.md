@@ -221,7 +221,7 @@ function isAlphaNumeric(char) {
 <br><br>
 
 ### 빈도수 세기 패턴 (Frequency counters)
-- 값이 다른 값에 포함되는지 확인 시
+- 값이 다른 값에 포함되는지 확인 시 (아나그램)
 - 발생 빈도 비교 시
 - 자바스크립트의 객체를 이용한 풀이
 
@@ -268,7 +268,26 @@ function solution(arr1, arr2) {
     }
     return true
 }
+
+// 아나그램
+let str1 = "anagram";
+let str2 = "nagaram";
+
+function solution(str1, str2) {
+  if (str1.length !== str2.length) return false;
+
+  let lookup = {};
+  for (let val of str1) lookup[val] = (lookup[val] || 0) + 1;
+
+  for (let val of str2) {
+    if (!lookup[val]) return false;
+    lookup[val]--;
+  }
+  return true;
+}
+
 ```
+
 <br><br>
 
 ## Reference <!-- omit in toc -->

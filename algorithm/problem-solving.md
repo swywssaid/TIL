@@ -1,26 +1,21 @@
-# 문제 해결법 (problem solving approach)
+# 문제 해결 (problem solving)
 
-- [문제 해결법 (problem solving approach)](#문제-해결법-problem-solving-approach)
-  - [1. algorithm](#1-algorithm)
-  - [2. 1단계: 문제의 이해 (Understand the Problem)](#2-1단계-문제의-이해-understand-the-problem)
-    - [2.1. 문제의 이해 과정](#21-문제의-이해-과정)
-  - [3. 2단계: 구체적 예제들 (Explore Concrete Examples)](#3-2단계-구체적-예제들-explore-concrete-examples)
-    - [3.1. 예제의 예제](#31-예제의-예제)
-  - [4. 3단계: 세부 분석 (Break It Down)](#4-3단계-세부-분석-break-it-down)
-  - [5. 4단계: 해결 또는 단순화 (Solve/Simplify)](#5-4단계-해결-또는-단순화-solvesimplify)
-  - [6. 5단계: 되돌아 보기와 리팩터 (Look Back and Refactor)](#6-5단계-되돌아-보기와-리팩터-look-back-and-refactor)
+## 문제 해결법 (problem solving approach)
+- 문제 해결을 위한 계획법
+ 
+<br>
 
-## 1. algorithm
+**algorithm**
 - 특정 작업을 달성하기 위한 단계나 일련의 과정
 
 <br><br>
 
-## 2. 1단계: 문제의 이해 (Understand the Problem) 
+### 1단계: 문제의 이해 (Understand the Problem) 
 - 문제를 보자 마자 푸는 것은 뭔가 진행이 되는 것처럼 느낄 수 있지만 한 걸음 물러서서 문제를 확실히 이해하는 것은 정말 중요하다.
 
 <br>
 
-### 2.1. 문제의 이해 과정
+#### 문제의 이해 과정
 1. 문제를 나만의 방식으로 다시 생각해봐라.
 2. 문제가 어떤 입력값을 받는가.
 3. 문제의 출력값은 무엇인가.
@@ -52,7 +47,7 @@
 ```
 <br><br>
 
-## 3. 2단계: 구체적 예제들 (Explore Concrete Examples) 
+### 2단계: 구체적 예제들 (Explore Concrete Examples) 
 - 예제를 떠올리는 것은 입력값과 출력값을 확인할 수 있다.
 - 예시를 적용하면서 더 많은 정보를 습득할 수 있다.
 - 단위 검사를 수행.
@@ -60,7 +55,7 @@
 
 <br>
 
-### 3.1. 예제의 예제 
+#### 예제의 예제 
 - 간단한 예제 2~3개
 - 좀 더 복잡한 예제
 - 빈 입력값
@@ -68,7 +63,7 @@
 
 <br><br>
 
-## 4. 3단계: 세부 분석 (Break It Down) 
+### 3단계: 세부 분석 (Break It Down) 
 - 문제를 세부 단계로 나눠 분석하는 것.
   - 단계의 틀을 잡고 항상 집중할 수 있도록 함.
   - 확신이 들지 않는 문제를 짚을 수 있다.
@@ -92,7 +87,7 @@ function charCout(str) {
 ```
 <br><br>
 
-## 5. 4단계: 해결 또는 단순화 (Solve/Simplify) 
+### 4단계: 해결 또는 단순화 (Solve/Simplify) 
 - 해결이 바로 되지 않은 문제는 단순화한다.
   - 다른 모든 것에 집중하기 위해 시간이 많이 소요되는 부분을 무시.
   - 문제를 시작 조차 못하는 것보다 낫다.
@@ -119,7 +114,7 @@ function charCout(str) {
 
 <br><br>
 
-## 6. 5단계: 되돌아 보기와 리팩터 (Look Back and Refactor) 
+### 5단계: 되돌아 보기와 리팩터 (Look Back and Refactor) 
 - 다른 접근 방식이 있나
 - 한눈에 이해할 수 있나, 직관적인가
 - 결과나 방법을 다른 문제에 적용할 수 있나
@@ -218,5 +213,64 @@ function isAlphaNumeric(char) {
 > 정규 표현식을 사용하면 55% 더 느리다. 하지만 이걸 떠올리라는 말은 아니다. 면접을 마치며 사족을 다는 정도면 됨.
 <img src="..\image\algorithm\solving-approach/charCodeAt-regexp.png" width="200" height="200">  
 
+<br><br>
+
+## 문제 해결 패턴 (problem solving pattern)
+- 문제 해결을 위한 일반적인 패턴
+
+<br><br>
+
+### 빈도수 세기 패턴 (Frequency counters)
+- 값이 다른 값에 포함되는지 확인 시
+- 발생 빈도 비교 시
+- 자바스크립트의 객체를 이용한 풀이
+
+
+```javascript
+let arr1 = [1,2,2,3];
+let arr2 = [4,4,1,9];
+
+// 중첩 루프 O(n^2)
+function solution(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    
+    for (let i = 0; i < arr1.length; i++) {
+        let matchIndex = arr2.indexOf(arr1[i] ** 2);
+        if (matchIndex === -1) return false;
+        arr2.splice(matchIndex, 1);
+    }
+    return true;
+}
+// 이건 내 풀이 코테 연습을 한 줄로 처리하는 습관 고치자...
+function solution(arr1, arr2) {
+  return !arr1
+    .map((x) => {
+      if (arr2.includes(x ** 2)) {
+        arr2.splice(arr2.indexOf(x ** 2), 1);
+        return "";
+      }
+    })
+    .filter((x) => x !== "").length;
+}
+
+// 빈도수 세기 패턴 O(n)
+function solution(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+
+    let frequencyCounter1 = {}
+    let frequencyCounter2 = {}
+    for (let val of arr1) frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+    for (let val of arr2) frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+
+    for (let key in frequencyCounter1) {
+        if (!(key ** 2 in frequencyCounter2)) return false;
+        if (frequencyCounter1[key] !== frequencyCounter2[key ** 2]) return false;
+    }
+    return true
+}
+```
+<br><br>
+
 ## Reference <!-- omit in toc -->
 [JavaScript 알고리즘 & 자료구조 마스터클래스](https://www.udemy.com/course/best-javascript-data-structures/)
+

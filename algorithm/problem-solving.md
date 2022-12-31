@@ -336,6 +336,56 @@ function countUniqueValues(arr) {
   return i + 1;
 }
 ```
+<br><br>
+
+### 기준점 간 이동 배열 패턴 (Sliding Window, 슬라이딩 윈도우)
+- 고정 사이즈의 윈도우(배열, 문자열)가 이동하며 특정 원소만 갱신하며 비교하는 풀이
+- 교집합 정보를 이용
+- 데이터의 하위 집합을 찾는 경우에 유용
+  - 가장 긴 고유 문자
+  - 연속된 숫자의 합의 최대값
+
+```javascript
+let arr = [1,2,5,2,8,1,5]
+let k = 4
+// 시간복잡도:O(n^2)
+function maxSubarraySum(arr, k) {
+    if (k > arr.length) return null;
+    // 음수로만 이루어져 있으면 합 또한 음수. 따라서 0으로 비교하면 안됨.
+    let max = -Infinity;
+    for (let i = 0; i < arr.length - k + 1; i++) {
+        let temp = 0;
+        for (let j = 0; j < num; j++) {
+            temp += arr[i + j];
+        }
+        if (temp > max) {
+            max = temp;
+        }
+    }
+    return max;
+}
+
+// 슬라이딩 윈도우
+// 시간복잡도:O(n)
+let arr = [1,2,5,2,8,1,5]
+let k = 4
+function maxSubarraySum(arr, k) {
+    if (k > arr.length) return null;
+    let maxSum = 0;
+    let tempSum = 0;
+
+    for (let i = 0; i < k; i++) {
+        maxSum += arr[i];
+    }
+    tempSum = maxSum;
+    for (let i = k; i < arr.length; i++) {
+        tempSum = tempSum - arr[i - k] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
+    }
+    
+    return maxSum;
+}
+```
 
 <br><br>
 

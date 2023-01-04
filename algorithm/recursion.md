@@ -1,9 +1,27 @@
 # 재귀 함수(Recursion)
-- 자기 자신을 호출하는 함수
- 
+
 <br><br>
 
-## 사용 목적 및 사례
+- [재귀 함수(Recursion)](#재귀-함수recursion)
+  - [1. 사용 목적 및 사례](#1-사용-목적-및-사례)
+  - [2. 스택 호출하기](#2-스택-호출하기)
+  - [3. 첫번째 재귀 함수](#3-첫번째-재귀-함수)
+  - [4. 두번째 재귀 함수](#4-두번째-재귀-함수)
+  - [5. 팩토리얼](#5-팩토리얼)
+    - [5.1. 반복문으로 팩토리얼 구현](#51-반복문으로-팩토리얼-구현)
+    - [5.2. 재귀 호출로 팩토리얼 구현](#52-재귀-호출로-팩토리얼-구현)
+  - [6. 재귀 함수 사용 시 주의할 점](#6-재귀-함수-사용-시-주의할-점)
+  - [7. Helper 메소드 재귀](#7-helper-메소드-재귀)
+  - [8. 순수 재귀 (Pure Recursion)](#8-순수-재귀-pure-recursion)
+
+<br><br>
+
+## 재귀 함수(Recursion) <!-- omit in toc -->
+- 자기 자신을 호출하는 함수
+
+<br><br>
+
+## 1. 사용 목적 및 사례
 - JSON.parse/JSON.stringify 
 - document.getElementById/DOM traversal algorithm
 - Object traversal
@@ -12,7 +30,7 @@
 
 <br><br>
 
-## 스택 호출하기
+## 2. 스택 호출하기
 - 호출 스택은 자바스크립트의 보이지 않는 곳에서 작동하는 정적 데이터 구조(static data structure)이다.
 - 재귀 함수의 두 가지 필수 요소 
   1. 종료 조건 (Base Case)
@@ -21,7 +39,7 @@
 
 <br><br>
 
-## 첫번째 재귀 함수
+## 3. 첫번째 재귀 함수
 - 단순 출력 목적
 
 ```javascript
@@ -38,7 +56,7 @@ function countDown(num) {
 
 <br><br>
 
-## 두번째 재귀 함수
+## 4. 두번째 재귀 함수
 - 반환값을 이용한 재귀 함수.
 - 호출 스택에 함수가 호출되며 종료 조건을 만날 때까지 쌓이고 하나씩 pop됨.
 ```javascript
@@ -50,8 +68,8 @@ function sumRange(num) {
 
 <br><br>
 
-## 팩토리얼
-### 반복문으로 팩토리얼 구현
+## 5. 팩토리얼
+### 5.1. 반복문으로 팩토리얼 구현
 ```javascript
 function factorial(num) {
     let total = 1; 
@@ -64,7 +82,7 @@ function factorial(num) {
 
 <br><br>
 
-### 재귀 호출로 팩토리얼 구현
+### 5.2. 재귀 호출로 팩토리얼 구현
 ```javascript
 // 종료조건을 2로한 것은 중복을 제거했기 때문.
 function factorial(num) {
@@ -75,14 +93,14 @@ function factorial(num) {
 
 <br><br>
 
-## 재귀 함수 사용 시 주의할 점
+## 6. 재귀 함수 사용 시 주의할 점
 - 종료 조건의 부재
 - 반환값의 부재 혹은 잘못된 반환값
 - 스택 오버 플로우 (Uncaught RangeError: Maximum call stack size exceeded)
 
 <br><br>
 
-## Helper 메소드 재귀
+## 7. Helper 메소드 재귀
 - 재귀와 함께 사용되는 설계 패턴 (Design Pattern)
 - 일종의 결과를 컴파일할 때 흔히 사용되는 패턴, 결과는 배열이나 배열과 비슷한 데이터 구조
 - 지금까지의 재귀 함수는 팩토리얼처럼 단일 단독 함수 (Single Standalone Function) 이다.
@@ -120,6 +138,38 @@ function collectOddValues(arr) {
     helper(arr)
     return result;
 }
+```
+
+<br><br>
+
+## 8. 순수 재귀 (Pure Recursion)
+- Helper 메소드와는 다르게 외부와 연결되지 않는 재귀 함수.
+- slice, the spread operator, concat와 같은 메소드로 복제해서 사용
+- 문자열은 변경할 수 없기 때문에 slice, substr, substring을 통해 복제해서 사용
+- 객체는 Object.assign, the spread operator로 복제해서 사용
+
+```javascript
+function collectOddValues(arr) {
+    let newArr = [];
+
+    if (arr.length === 0) {
+        return newArr;
+    }
+
+    if (arr[0] % 2 !== 0) {
+        newArr.push(arr[0])
+    }
+
+    newArr = newArr.concat(collectOddValues(arr.slice(1)))
+    return newArr;
+}
+/*
+collectOddValues([1,2,3,4]) => [1, 3]
+[1].concat(collectOddValues([2,3,4])) => [1].concat([3])
+    [].concat(collectOddValues([3,4])) => [].concat([3])
+        [3].concat(collectOddValues([4])) => [3].concat([])
+            [].concat(collectOddValues([])) => []
+*/
 ```
 
 <br><br>

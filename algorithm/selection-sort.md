@@ -14,34 +14,34 @@
 
 ```javascript
 // 배열 요소를 스왑한다.
-function swap(arr,targetX,targetY) {
-    let temp = arr[targetX];
-    arr[targetX] = arr[targetY];
-    arr[targetY] = temp;
+function swap(arr, targetX, targetY) {
+  let temp = arr[targetX];
+  arr[targetX] = arr[targetY];
+  arr[targetY] = temp;
 }
 
 // 선택 정렬 함수
 function selectionSort(arr) {
-    for (let i = 0; i < arr.length - 1; i++) {
-        // i인덱스 요소가 최솟값일 때를 고려한다.
-        let minIndex = i
-        for (let j = i + 1; j < arr.length; j++) {
-            // 값을 비교 후 조건에 맞다면 인덱스를 기억한다.
-            // 조건이 맞을 때 마다 스왑하는 할 수 있지만 불필요한 작업이다.
-            if (arr[i] > arr[j]) {
-                minIndex = j
-            }
-        }
-
-        // j iteration을 다 돌면 최솟값의 인덱스가 저장된다.
-        // 이후 스왑은 iteration 당 한번만 한다. 
-        swap(arr, i, minIndex)
+  for (let i = 0; i < arr.length - 1; i++) {
+    // i인덱스 요소가 최솟값일 때를 고려한다.
+    let minIndex = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      // 값을 비교 후 조건에 맞다면 인덱스를 기억한다.
+      // 조건이 맞을 때 마다 스왑하는 할 수 있지만 불필요한 작업이다.
+      if (arr[i] > arr[j]) {
+        minIndex = j;
+      }
     }
-    console.log(arr)
+
+    // j iteration을 다 돌면 최솟값의 인덱스가 저장된다.
+    // 이후 스왑은 iteration 당 한번만 한다.
+    if (i !== minIndex) swap(arr, i, minIndex);
+  }
+  console.log(arr);
 }
 
-let arr = [4,3,2,1,5];
-selectionSort(arr)
+let arr = [4, 3, 2, 1, 5];
+selectionSort(arr);
 ```
 <br /><br />
 

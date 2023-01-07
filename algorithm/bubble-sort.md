@@ -9,6 +9,7 @@
 ## **1. Bubble Sort (버블 정렬)**
 - 버블 정렬은 두 요소를 확인하고 올바른 위치에서 교환하는 정렬 알고리즘입니다.
 - 여기서 올바른 위치란 오른차순, 내림차순을 고려한 순서가 될 수 있다.
+- 루프를 한번 돌 때마다 정렬해야할 항목이 하나씩 줄어든다.
 <img src="..\image\algorithm\bubble-sort\bubble-sort.png" width="600" height="330">
 <img src="..\image\algorithm\bubble-sort\bubble-sort2.png" width="600" height="330">
 

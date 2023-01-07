@@ -74,7 +74,27 @@ function bubbleSort(arr) {
 }
 bubbleSort(arr)
 ```
-<br />
+<br /><br />
+
+**swap 방법**
+1. 변수 사용법
+```javascript
+function swap(arr, idx1, idx2) {
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+}
+```
+<br>
+
+2. 구조 분해 할당
+```javascript
+function swap(arr, idx1, idx2) {
+    [idx1, idx2] = [idx2, idx1];
+}
+```
+
+<br /><br />
 
 >P.S. 결국 최적화된 상태의 버블 정렬이여도 이미 정렬된 배열이 아닌 이상 시간복잡도는 $O(N^2)$이다. 사실 자주 사용되는 알고리즘은 아니다. 더 좋은 알고리즘이 많기 때문에... 하지만 이해하기 쉽기 때문에 정렬 입문으로 좋다.
 

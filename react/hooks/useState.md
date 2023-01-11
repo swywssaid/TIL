@@ -1,12 +1,19 @@
-# useState
+# useState<!-- omit in toc -->
+- [1. useState란](#1-usestate란)
+- [2. useState 예제](#2-usestate-예제)
+  - [2.1. state와 setState](#21-state와-setstate)
+  - [2.2. prevState](#22-prevstate)
+  - [2.3. 초기값이 무거운 잡업일 때](#23-초기값이-무거운-잡업일-때)
 
-## useState란
+<br>
+
+## 1. useState란
 - 상태를 설정할 수 있는 훅
 
 <br><br>
 
-## useState 구현
-### state와 setState
+## 2. useState 예제
+### 2.1. state와 setState
 ```javascript
 const [value, setValue] = useState(0)
 
@@ -23,7 +30,7 @@ return (
 
 <br><br>
 
-### prevState
+### 2.2. prevState
 - setState의 콜백함수 인자에는 이전 상태값이 들어있다.
 
 ```javascript
@@ -53,7 +60,7 @@ return (
 
 <br><br>
 
-### 초기값이 무거운 잡업일 때
+### 2.3. 초기값이 무거운 잡업일 때
 - 초기값이 무거운 작업일 때 콜백 함수로 전달하면 된다.
 - 아래의 경우 렌더링 될 때마다 무거운 작업이 실행된다.
 

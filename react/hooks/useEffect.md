@@ -1,14 +1,13 @@
-# useEffect 
+# useEffect<!-- omit in toc -->
 
-- [useEffect](#useeffect)
-  - [1. useEffect란](#1-useeffect란)
-  - [2. useEffect 구현](#2-useeffect-구현)
-    - [2.1. 렌더링 될 때마다 실행](#21-렌더링-될-때마다-실행)
-    - [2.2. 특정 값이 바뀔 때마다 실행](#22-특정-값이-바뀔-때마다-실행)
-    - [2.3. Clean up (정리)](#23-clean-up-정리)
-  - [3. useEffect 예제](#3-useeffect-예제)
-    - [3.1. useEffect 예제1](#31-useeffect-예제1)
-    - [3.2. useEffect 예제2 (Clean Up)](#32-useeffect-예제2-clean-up)
+- [1. useEffect란](#1-useeffect란)
+- [2. useEffect 사용법](#2-useeffect-사용법)
+  - [2.1. 렌더링 될 때마다 실행](#21-렌더링-될-때마다-실행)
+  - [2.2. 특정 값이 바뀔 때마다 실행](#22-특정-값이-바뀔-때마다-실행)
+  - [2.3. Clean up (정리)](#23-clean-up-정리)
+- [3. useEffect 예제](#3-useeffect-예제)
+  - [3.1. useEffect 예제1](#31-useeffect-예제1)
+  - [3.2. useEffect 예제2 (Clean Up)](#32-useeffect-예제2-clean-up)
 
 <br><br>
 
@@ -20,7 +19,7 @@
 
 <br><br>
 
-## 2. useEffect 구현
+## 2. useEffect 사용법
 ### 2.1. 렌더링 될 때마다 실행
 - 맨 처음 렌더링 될 때 (Mount) + 다시 렌더링 될 때 (Update)
 

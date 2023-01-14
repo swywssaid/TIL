@@ -47,11 +47,25 @@
 
 <br><br>
 
+## Radix Sort 의사코드
+1. 입력값으로 배열을 받는 함수를 정의한다.
+2. 배열 내 숫자 중 가장 큰 자릿수를 구한다.
+3. 가장 큰 자릿수만큼 루프를 돈다.
+   - 루프마다, 각 자릿수에 버킷을 만든다. (0 ~ 9)
+   - 각 버킷에 대응하는 숫자를 배열에 담는다.
+   - 기존 배열을 버킷에 담긴 수로 교체한다. (0에서 9로)
+4. 배열을 리턴한다.
+
+<br><br>
+
 ## Radix Sort 구현
 
 ### Radix Sort: helper 메소드 구현
 1. 각 자릿수의 숫자를 알아내는 메소드
 2. 몇 자릿수인지 확인하는 메소드
+3. 자릿수가 가장 많은 수를 알아내는 메소드
+
+<br><br>
 
 #### 각 자릿수의 숫자를 알아내는 메소드
 
@@ -121,6 +135,63 @@ function mostDigits(arr) {
   return Math.max(...arr.map((x) => digitCount(x)));
 }
 ```
+
+<br><br>
+
+### Radix Sort 구현
+
+```javascript
+function radixSort(arr) {
+  let mostDigit = mostDigits(arr);
+  for (let i = 0; i < mostDigit; i++) {
+    let bucket = Array.from({length: 10}, () => []);
+    arr.forEach((x) => {
+      bucket[getDigit(x, i)].push(x);
+    });
+    arr = [].concat(...bucket);
+  }
+  return arr;
+}
+
+// 내 코드
+function radixSort(arr) {
+  let mostDigit = mostDigits(arr);
+  for (let i = 0; i < mostDigit; i++) {
+    let bucket = new Array(10).fill(0).map((x) => []);
+    let temp = [];
+    arr.forEach((x) => {
+      bucket[getDigit(x, i)].push(x);
+    });
+    bucket.forEach((x) => temp.push(...x));
+    arr = temp;
+  }
+  return arr;
+}
+```
+
+<br><br>
+
+## Radix Sort Big O
+- 여기서 k는 숫자의 자릿수이다
+  
+<br>
+
+**time complexity (Best)**
+- O(nk)
+  
+**time complexity (Average)**
+- O(nk)
+
+**time complexity (Worst)**
+- O(nk)
+
+**space complexity**
+- O(n + k)
+
+<br>
+
+> 이론상으론 기수 정렬이 모든 비교 정렬보다 빠를 수 있다.
+> 하지만 컴퓨터 메모리에 수를 저장하는 방식에 대한 제한으로 인해 실제와 다를 수 있다. 예상보다 좀 더 느림.
 
 <br><br>
 

@@ -1,11 +1,20 @@
-# TDD
-## TDD(테스트 주도 개발, Test Driven Development) 란
+# TDD 
+- [TDD](#tdd)
+  - [1. TDD(테스트 주도 개발, Test Driven Development) 란](#1-tdd테스트-주도-개발-test-driven-development-란)
+  - [2. React Testing Library](#2-react-testing-library)
+  - [3. Jest 란](#3-jest-란)
+    - [3.1. Jest 파일 구조](#31-jest-파일-구조)
+  - [4. 쿼리 함수란](#4-쿼리-함수란)
+
+<br><br>
+
+## 1. TDD(테스트 주도 개발, Test Driven Development) 란
 
 - 테스트 코드를 작성하여 해당 코드를 Pass할 수 있는 코드를 작성하며 개발하는 방법
 
 <br><br>
 
-## React Testing Library
+## 2. React Testing Library
 
 - 리액트 컴포넌트를 테스트하는 가벼운 솔루션!
 - 행위 주도 테스트 (Behavior Driven Test)
@@ -15,7 +24,7 @@
 
 <br><br>
 
-## Jest 란
+## 3. Jest 란
 - 최소한의 설정으로 동작하며 Test Case 를 만들어서 어플리케이션 코드가 잘 돌아가는지 확인
 - 단위 (Unit) 테스트를 위해서 이용합니다.
 - 특정 형식으로 파일명을 작성하거나 폴더를 생성 시 Jest가 test 파일을 알아서 찾는다.
@@ -23,7 +32,7 @@
 
 <br><br>
 
-### Jest 파일 구조
+### 3.1. Jest 파일 구조
 
 ```jsx
 // 리액트 설치 시 기본 App.test.js
@@ -52,7 +61,7 @@ test('renders learn react link', () => {
 
 <br><br>
 
-## 쿼리 함수란
+## 4. 쿼리 함수란
 - 페이지에서 요소를  찾기 위해 테스트 라이브러리가 제공하는 방법
 - `get`, `query`, `find` 가 있다.
     - [React Testing Library 쿼리 함수 종류](https://testing-library.com/docs/dom-testing-library/cheatsheet/)

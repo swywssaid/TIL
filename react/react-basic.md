@@ -38,7 +38,7 @@
 - hook이란 리엑트에서 제공하고 있는 기본적인 함수를 말한다. 
  <img src="..\image\react\react-basic\state.png" width="600" height="330">
 
- ```javascript
+ ```jsx
 const _mode = useState('WELCOME');
 const mode = _mode[0];
 const setMode = _mode[1];  
@@ -51,7 +51,7 @@ const [mode, setMode] = useState('WELCOME');
 ### **5.1. State와 데이터타입**
 - 원시데이터타입과 객체데이터타입일 때 state 사용방법이 다르다.
 - 리엑트는 state값이 변하지 않았다면 굳이 컴포넌트를 재실행하지 않는다.
-```javascript
+```jsx
 // 원시데이터타입
 const [mode, setMode] = useState(1);
 setMode(2);  // 재실행됨. 원시데이터이기 때문.
@@ -96,7 +96,7 @@ setMode(newMode); // mode와 다르므로 재실행됨.
 <br/>
 
 **기존 값 props를 통해 나타내기**  
-```javascript
+```jsx
 <form>
     <p>
         <input type="text" name="title" value={props.title} />
@@ -120,7 +120,7 @@ setMode(newMode); // mode와 다르므로 재실행됨.
 
 **변경되는 값 onChage를 통해 확인하기**
 
-```javascript
+```jsx
 const [title, setTitle] = useState(props.title);
 const [body, setBody] = useState(props.body);
 
@@ -163,7 +163,7 @@ return (
 ### **6.3. DELETE**
 - 리엑트에서는 하나의 부모 태그 안에 태그들이 들어있어야한다. 
 - 아래와 같이 빈태그로 복수의 태그들을 묶어준다. html로 변환될때는 아무의미도 없다.
-```javascript
+```jsx
 <>
     <li>
         <a

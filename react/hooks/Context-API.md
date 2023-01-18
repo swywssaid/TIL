@@ -22,7 +22,7 @@
 <br><br>
 
 ## 3. Context 예제
-```javascript
+```jsx
 // Prop drilling
 function App() {
   return <GrandParent value="Hello World!" />;
@@ -49,7 +49,7 @@ function Message({ value }) {
 }
 ```
 
-```javascript
+```jsx
 // Context API 적용
 import { createContext, useContext } from 'react';
 

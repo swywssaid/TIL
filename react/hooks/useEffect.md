@@ -23,7 +23,7 @@
 ### 2.1. 렌더링 될 때마다 실행
 - 맨 처음 렌더링 될 때 (Mount) + 다시 렌더링 될 때 (Update)
 
-```javascript
+```jsx
 useEffect(() => {
     // 작업...
 });
@@ -48,7 +48,7 @@ useEffect(() => {
   - 타이머를 시작했다가, 멈추는 것
   - 어떤 이벤트 리스너를 등록했다가, 제거하는 것
 
-```javascript
+```jsx
 useEffect(() => {
     // 작업...
 
@@ -63,7 +63,7 @@ useEffect(() => {
 ## 3. useEffect 예제
 ### 3.1. useEffect 예제1
 
-```javascript
+```jsx
 const [count, setCount] = useState(1);
 const [value, setValue] = useState("");
 
@@ -113,7 +113,7 @@ return (
   2. 다시 버튼을 누르게 되면 showTimer가 false가 되고 Timer 컴포넌트는 언마운트가 되며 타이머 시작, 콘솔 확인 글씨가 사라지게 된다.
   3. **하지만 콘솔창의 타이머는 계속 작동 중인 문제가 발생한다.**
 
-```javascript
+```jsx
 // Timer.js 컴포넌트
 const Timer = (props) => {
     // 처음 렌더링될 때(Mount)만 실행 (변수가 비어있기 때문에)
@@ -150,7 +150,7 @@ const App = () => {
   2. 다시 버튼을 누르게 되면 showTimer가 false가 되고 Timer 컴포넌트는 언마운트가 되며 타이머 시작, 콘솔 확인 글씨가 사라지게 된다.
   3. 해당 컴포넌트가 언마운트 될 때 or 다음 렌더링 시 불릴 useEffect가 실행되기 이전에 return 실행, 즉 인터벌이 클리어된다.
 
-```javascript
+```jsx
 // Timer.js 컴포넌트
 const Timer = (props) => {
     // 처음 렌더링될 때(Mount)만 실행 (변수가 비어있기 때문에)

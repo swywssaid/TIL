@@ -14,7 +14,7 @@
 
 ## 2. useState 예제
 ### 2.1. state와 setState
-```javascript
+```jsx
 const [value, setValue] = useState(0)
 
 const updateValue = () => {
@@ -33,7 +33,7 @@ return (
 ### 2.2. prevState
 - setState의 콜백함수 인자에는 이전 상태값이 들어있다.
 
-```javascript
+```jsx
 const [value, setValue] = useState("")
 const [todos, setTodos] = useState([])
 
@@ -64,7 +64,7 @@ return (
 - 초기값이 무거운 작업일 때 콜백 함수로 전달하면 된다.
 - 아래의 경우 렌더링 될 때마다 무거운 작업이 실행된다.
 
-```javascript
+```jsx
 const heavyWork = () => {
     console.log("무거운 작업");
     return [];
@@ -101,7 +101,7 @@ function App() {
 
 - 마운트될 때만 실행된다.
   
-```javascript
+```jsx
 const heavyWork = () => {
     console.log("무거운 작업");
     return [];

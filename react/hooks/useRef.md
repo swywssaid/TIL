@@ -18,7 +18,7 @@
 
 > Ref의 값은 컴포넌트의 생애주기 동안 유지됨. (마운팅 시점부터 언마운트까지)
 
-```javascript
+```jsx
 /* 
 REF 객체를 반환 
 {current: value}
@@ -34,7 +34,7 @@ const REF = useRef(value);
    - 스크롤 박스 조작
    - 캔버스 요소에 그림 그릴 때
 
-```javascript
+```jsx
 /* 
 REF 객체를 접근하고자 하는 태그에 ref 속성으로 넣어주면 된다. 
 */
@@ -47,7 +47,7 @@ const REF = useRef(value);
 
 ## 2. useRef 예제
 ### 2.1. 변수 관리1: Ref 값 변경 시 렌더링되지 않는다.
-```javascript
+```jsx
 /*
 Increase Ref를 눌러도 화면의 Ref값은 변화되지 않는다.
 state를 변경시켜 렌더링이 된다면 그 때 변화된 Ref값이 나타나게 된다.
@@ -79,7 +79,7 @@ return (
 - 렌더링의 횟수를 체크해보자
 - 아래의 코드는 무한루프에 빠진다.
 
-```javascript
+```jsx
 /*
 useEffect는 렌더링 시 실행되니 state로 체크할 수 있지 않을까?
 -> useEffect가 처음 마운트될 때 setRenderCount를 실행하고 그러면 렌더링이 되고 다시 useEffect가 실행되고 setRenderCount를 실행하고... 
@@ -107,7 +107,7 @@ return (
 
 - 이때 useRef를 사용하면 된다.
 
-```javascript
+```jsx
 const [count, setCount] = useState(0);
 const renderCount = useRef(0);
 
@@ -133,7 +133,7 @@ return (
 - 로그인 input창에 자동으로 포커싱되도록 해보자.
 - 입력한 아이디 값 팝업
   
-```javascript
+```jsx
 /*
 useRef의 초기값을 비워두는 이유({current:undefined})는 어차피 접근하고자 하는 태그가 들어갈 것이기 때문이다.
 {current:input}

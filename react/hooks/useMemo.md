@@ -105,7 +105,7 @@ return (
 - 객체 데이터 타입의 경우 변수에 메모리 주소가 담기게 되는데 렌더링 시 새로운 메모리 주소가 할당되어 값이 변화됐다고 인지한다. 따라서 useEffect의 콜백함수가 실행된다.
 - useMemo를 통해 값을 기억해 사용하게 된다. 이렇게 되면 isHungry가 바뀌기 전까진 동일한 메모리주소를 꺼내 사용하기 때문에 useEffect가 호출되지 않고 isHungry가 바뀌면 useMemo가 호출되어 메모리 주소가 바뀌고 useEffect가 호출되게 된다.
 
-```javascript
+```jsx
 const [value, setValue] = useState(0);
 const [isHungry, setIsHungry] = useState(true);
 

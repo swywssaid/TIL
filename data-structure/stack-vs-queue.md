@@ -1,6 +1,6 @@
 # Stack vs Queue
 - [Stack vs Queue](#stack-vs-queue)
-  - [**1. Stack & Queue**](#1-stack--queue)
+  - [**1. Stack \& Queue**](#1-stack--queue)
   - [**2. Stack (스택)**](#2-stack-스택)
   - [**3. Queue (큐)**](#3-queue-큐)
 
@@ -21,8 +21,7 @@
 - 스택에서 사용하는 연산은 아래와 같다.
     - push: 요소를 스택 끝에 삽입.
     - pop: 스택 끝 요소를 추출.
-  
-<img src="..\image\algorithm\stack-vs-queue/stack.png" width="300" height="330"><img src="..\image\algorithm\stack-vs-queue/stack2.png" width="200" height="200">
+<img src="..\image\data-structure\stack-vs-queue/stack.png" width="300" height="330"><img src="..\image\data-structure\stack-vs-queue/stack2.png" width="200" height="200">
 
 <br /><br />
 
@@ -34,7 +33,7 @@
     - enqueue: 요소를 큐에 삽입.
     - dequeue: 요소를 큐에서 추출.
   
-<img src="..\image\algorithm\stack-vs-queue/queue.png" width="600" height="330">
+<img src="..\image\data-structure\stack-vs-queue/queue.png" width="600" height="330">
 
 <br /><br />
 

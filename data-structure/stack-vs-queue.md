@@ -3,6 +3,8 @@
   - [1. Stack \& Queue](#1-stack--queue)
   - [2. Stack (스택)](#2-stack-스택)
     - [스택 구현하기1: 내장 메소드 이용](#스택-구현하기1-내장-메소드-이용)
+    - [스택 구현하기2: 단일 연결 리스트를 이용한 구현](#스택-구현하기2-단일-연결-리스트를-이용한-구현)
+  - [2. Stack Big O](#2-stack-big-o)
   - [3. Queue (큐)](#3-queue-큐)
 
 <br /><br />
@@ -48,6 +50,73 @@ stack.unshift("a");
 stack.shift();
 
 ```
+
+<br><br>
+
+### 스택 구현하기2: 단일 연결 리스트를 이용한 구현
+- 단일 연결 리스트의 shift, unshift를 이용
+  - 상수 시간을 갖기 위해서
+```javascript
+Class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+Class Stack {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+  push(value) {
+    let newNode = new Node(value);
+    if(!this.first) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    return ++this.size;
+  }
+  pop() {
+    if (!this.first) return null;
+    const temp = this.first;
+    if (this.first === this.last) {
+      this.last = null;
+    }
+    this.first = this.first.next;
+    this.size--;
+    return temp.value;
+  }
+
+}
+```
+
+<br><br>
+
+## 2. Stack Big O
+- 삽입, 제거에 용이
+ㄴ
+**삽입**
+- O(1)
+
+<br>
+
+**제거**
+- O(1) 
+
+<br>
+
+**탐색**
+- O(n)
+
+<br>
+
+**접근**
+- O(n)
 
 <br><br>
 

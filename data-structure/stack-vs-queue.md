@@ -1,12 +1,15 @@
-# Stack vs Queue
-- [Stack vs Queue](#stack-vs-queue)
-  - [1. Stack \& Queue](#1-stack--queue)
-  - [2. Stack (스택) 이란](#2-stack-스택-이란)
-  - [스택 구현하기](#스택-구현하기)
-    - [스택 구현하기1: 내장 메소드 이용](#스택-구현하기1-내장-메소드-이용)
-    - [스택 구현하기2: 단일 연결 리스트를 이용한 구현](#스택-구현하기2-단일-연결-리스트를-이용한-구현)
-  - [2. Stack Big O](#2-stack-big-o)
-  - [3. Queue (큐)](#3-queue-큐)
+# 1. Stack vs Queue <!-- omit in toc -->
+- [1. Stack \& Queue](#1-stack--queue)
+- [2. Stack (스택) 이란](#2-stack-스택-이란)
+- [3. 스택 구현하기](#3-스택-구현하기)
+  - [3.1. 스택 구현하기1: 내장 메소드 이용](#31-스택-구현하기1-내장-메소드-이용)
+  - [3.2. 스택 구현하기2: 단일 연결 리스트를 이용한 구현](#32-스택-구현하기2-단일-연결-리스트를-이용한-구현)
+- [4. Stack Big O](#4-stack-big-o)
+- [5. Queue (큐) 란](#5-queue-큐-란)
+- [6. 큐 구현하기](#6-큐-구현하기)
+  - [6.1. 큐 구현하기1: 내장 메소드 사용](#61-큐-구현하기1-내장-메소드-사용)
+  - [6.2. 큐 구현하기2: 단일 연결 리스트를 이용한 구현](#62-큐-구현하기2-단일-연결-리스트를-이용한-구현)
+- [7. Queue Big O](#7-queue-big-o)
 
 <br /><br />
 
@@ -37,8 +40,8 @@
 
 <br><br>
 
-## 스택 구현하기
-### 스택 구현하기1: 내장 메소드 이용
+## 3. 스택 구현하기
+### 3.1. 스택 구현하기1: 내장 메소드 이용
 - 스택을 지원하는 프로그래밍 언어도 있지만 javascript는 없음.
 - 배열의 특성상 push,pop이 효율적
 
@@ -55,7 +58,7 @@ stack.shift();
 
 <br><br>
 
-### 스택 구현하기2: 단일 연결 리스트를 이용한 구현
+### 3.2. 스택 구현하기2: 단일 연결 리스트를 이용한 구현
 - 단일 연결 리스트의 shift, unshift를 이용
   - 상수 시간을 갖기 위해서
 ```javascript
@@ -99,7 +102,7 @@ Class Stack {
 
 <br><br>
 
-## 2. Stack Big O
+## 4. Stack Big O
 - 삽입, 제거에 용이
 ㄴ
 **삽입**
@@ -122,7 +125,7 @@ Class Stack {
 
 <br><br>
 
-## 3. Queue (큐)
+## 5. Queue (큐) 란
 - 리스트의 rear(후면)에서만 삽입 가능하고, front(전면)에서만 추출이 가능한 자료구조.
 - 큐에서는 항상 front와 rear 포인터를 사용하여 목록의 처음과 끝을 추적.
 - FIFO (First In First Out) 원리
@@ -132,7 +135,105 @@ Class Stack {
   
 <img src="..\image\data-structure\stack-vs-queue/queue.png" width="600" height="330">
 
+<br />
+
+**언제 사용하나?**
+- 백그라운드 작업
+- 소스 업로딩
+- 프린팅/태스크 프로세싱
+
 <br /><br />
+
+## 6. 큐 구현하기
+### 6.1. 큐 구현하기1: 내장 메소드 사용
+- 성능이 좋진 않음.shift, unshift가  O(n)이기 때문
+
+```javascript
+let q = [];
+// push & shift
+q.push("first");
+q.push("second");
+q.push("third");
+q.shift();
+q.shift();
+q.shift();
+
+
+// unshift & pop
+q.unshift("first");
+q.unshift("second");
+q.unshift("third");
+q.pop();
+q.pop();
+q.pop();
+
+```
+
+<br /><br />
+
+### 6.2. 큐 구현하기2: 단일 연결 리스트를 이용한 구현
+```javascript
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class Queue {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+  enQueue(value) {
+    let newNode = new Node(value);
+    if(!this.first) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      this.last.next = newNode;
+      this.last = newNode;
+    }
+    return ++this.size;
+  }
+  deQueue() {
+    if (!this.first) return null;
+    const temp = this.first;
+    if (this.first === this.last) {
+      this.last = null;
+    }
+    this.first = this.first.next;
+    this.size--;
+    return temp.value;
+  }
+
+}
+```
+
+<br /><br />
+
+## 7. Queue Big O
+- 삽입, 제거에 용이
+
+**삽입**
+- O(1)
+
+<br>
+
+**제거**
+- O(1) 
+
+<br>
+
+**탐색**
+- O(n)
+
+<br>
+
+**접근**
+- O(n)
+
 
 ## Reference<!-- omit in toc -->
 

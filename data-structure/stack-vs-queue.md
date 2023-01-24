@@ -62,14 +62,14 @@ stack.shift();
 - 단일 연결 리스트의 shift, unshift를 이용
   - 상수 시간을 갖기 위해서
 ```javascript
-Class Node {
+class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
   }
 }
 
-Class Stack {
+class Stack {
   constructor() {
     this.first = null;
     this.last = null;
@@ -104,7 +104,7 @@ Class Stack {
 
 ## 4. Stack Big O
 - 삽입, 제거에 용이
-ㄴ
+
 **삽입**
 - O(1)
 

@@ -238,6 +238,11 @@ class Queue {
 **접근**
 - O(n)
 
+<br><br>
+
+> 스택과 큐는 좀 더 복잡한 자료구조와 알고리즘의 기초가 되기 때문에 중요하다
+
+<br><br>
 
 ## Reference<!-- omit in toc -->
 

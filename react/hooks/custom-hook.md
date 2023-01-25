@@ -1,20 +1,28 @@
-# Custom Hook
+# Custom Hook 
+- [Custom Hook](#custom-hook)
+  - [1. Custom Hook이란](#1-custom-hook이란)
+  - [2. Custom Hook 언제 사용하나](#2-custom-hook-언제-사용하나)
+  - [3. Custom Hook 예제](#3-custom-hook-예제)
+    - [3.1. Custom Hook 예제1: useInput](#31-custom-hook-예제1-useinput)
+    - [3.2. Custom Hook 예제2: useFetch](#32-custom-hook-예제2-usefetch)
 
-## Custom Hook이란
+<br><br>
+
+## 1. Custom Hook이란
 - 우리가 커스텀에서 만드는 훅
 - 커스텀 훅 내부에 리액트 훅을 사용할 수 있다.
 - 다른 컴포넌트, 한 컴포넌트 내에서 커스텀 훅 마다 독립적인 state와 effect를 관리할 수 있다.
 
 <br><br>
 
-## Custom Hook 언제 사용하나
+## 2. Custom Hook 언제 사용하나
 1. 한 컴포넌트 내 중복되는 코드들이 있을 때
 2. 다른 컴포넌트 간에 중복되는 코드들이 있을 때
 
 <br><br>
 
-## Custom Hook 예제
-### Custom Hook 예제1: useInput
+## 3. Custom Hook 예제
+### 3.1. Custom Hook 예제1: useInput
 
 ```javascript
 // App.js
@@ -57,7 +65,7 @@ export default function useInput(initialValue, submitAction) {
 
 <br><br>
 
-### Custom Hook 예제2: useFetch
+### 3.2. Custom Hook 예제2: useFetch
 - javascript fetch 이용하는 훅
 - baseUrl을 기준으로 다양한 api를 사용할 때 유용
 

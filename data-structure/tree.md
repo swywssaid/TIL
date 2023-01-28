@@ -224,7 +224,7 @@ class BinarySearchTree {
 
 <br>
 
-**삽입**
+**탐색**
 - O(logn)
 
 > 반드시 O(logn)를 보장하지는 않는다.

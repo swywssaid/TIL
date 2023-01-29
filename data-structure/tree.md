@@ -11,6 +11,20 @@
     - [2.4. 이진 탐색 트리 구현1: Insert](#24-이진-탐색-트리-구현1-insert)
     - [2.5. 이진 탐색 트리 구현2: Find(Includes)](#25-이진-탐색-트리-구현2-findincludes)
     - [2.6. 이진 검색 트리 Big O](#26-이진-검색-트리-big-o)
+  - [Tree Traversal (트리 순회)](#tree-traversal-트리-순회)
+    - [트리 순회](#트리-순회)
+    - [BFS(Breadth Firsh Search, 너비 우선 탐색)](#bfsbreadth-firsh-search-너비-우선-탐색)
+      - [BFS란](#bfs란)
+      - [BFS 구현](#bfs-구현)
+    - [DFS(Depth Firsh Search, 깊이 우선 탐색)](#dfsdepth-firsh-search-깊이-우선-탐색)
+      - [DFS - PreOrder (전위 순회)](#dfs---preorder-전위-순회)
+      - [전위 순회 구현](#전위-순회-구현)
+      - [DFS - PostOrder (후위 순회)](#dfs---postorder-후위-순회)
+      - [후위 순회 구현](#후위-순회-구현)
+      - [DFS - InOrder (중위 순회)](#dfs---inorder-중위-순회)
+      - [중위 순회 구현](#중위-순회-구현)
+      - [DFS 비교](#dfs-비교)
+    - [BFS vs DFS](#bfs-vs-dfs)
 
 <br><br>
 
@@ -233,5 +247,215 @@ class BinarySearchTree {
 
 <br><br>
 
+## Tree Traversal (트리 순회)
+### 트리 순회
+- 특정 값을 찾기 위해선 모든 노드를 한 번씩 거쳐 가야 함
+- 크게 두 가지 방법이 있다 (탐색 방향을 뜻함)
+  1. BFS(Breadth Firsh Search, 너비 우선 탐색)
+  2. DFS(Depth Firsh Search, 깊이 우선 탐색)
+
+### BFS(Breadth Firsh Search, 너비 우선 탐색)
+#### BFS란
+- 같은 레벨의 노드 순으로 거쳐가는 방법
+- 오른쪽, 왼쪽 방향은 중요하지 않다. 수평 방향인 것이 중요
+- 큐를 사용
+
+<br><br>
+
+#### BFS 구현
+1. 큐와 노드 값을 방문한 노드들 저장할 변수 생성
+2. 큐에 루트 넣기
+3. 큐가 빌 때까지 루프
+   1. 큐에서 노드를 제거하고 그 노드는 변수에 저장
+   2. 그 노드에 왼쪽 노드가 있다면, 왼쪽 노드를 큐에 저장
+   3. 그 노드에 오른쪽 노드가 있다면, 오른쪽 노드를 큐에 저장
+4. 변수 리턴
+
+```javascript
+class Node {
+    constructor (value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class BinaryTree {
+    constructor {
+        this.root = null;
+    }
+    BFS() {
+        let node = this.root,
+            queue = [], 
+            visited = [];
+        queue.push(node);
+        while (queue.length) {
+            node = queue.shift();
+            visited.push(node.value);
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+        return visited;    
+    }
+}
+```
+
+> 이진 트리이기 때문에 left, right으로 한 것임. 
+> 삼진이면 3개의 자식이다. 모든 자식에 대해 루프를 돌면 됨.
+
+<br><br>
+
+### DFS(Depth Firsh Search, 깊이 우선 탐색)
+#### DFS - PreOrder (전위 순회)
+- 루트 - (노드 - 왼쪽 - 오른쪽)재귀
+- 루트를 앞에 위치
+- 재귀적
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Preorder-traversal.gif" width="600" height="330">
+
+<br>
+
+#### 전위 순회 구현
+1. 방문한 노드 저장할 visited 변수 생성
+2. BST의 루트를 저장할 current 변수 생성 (여기선 직접 인자에 전달)
+3. helper function, 인자로 노드 받음
+   1. visited에 노드 값 넣는다
+   2. 그 노드에 왼쪽 노드가 있다면, helper에 왼쪽 노드 전달
+   3. 그 노드에 오른쪽 노드가 있다면, helper에 오른쪽 노드 전달
+4. helper에 current 전달 후 호출
+5. visited 반환
+
+```javascript
+class BinarySearchTree {
+    constructor {
+        this.root = null;
+    }
+    DFSPreOrder() {
+        let visited = []; 
+        function traverse(node) {
+            visited.push(node.value);
+            if (node.left) traverse(node.left); // node.left && traverse(node.left);
+            if (node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return visited;
+    }
+}
+```
+
+<br><br>
+
+#### DFS - PostOrder (후위 순회)
+- (왼쪽 - 오른쪽 - 노드)재귀 - 루트
+- 루트를 마지막에 위치
+- 재귀적
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Postorder-traversal.gif" width="600" height="330">
+
+<br>
+
+#### 후위 순회 구현
+1. 방문한 노드 저장할 visited 변수 생성
+2. BST의 루트를 저장할 current 변수 생성 (여기선 직접 인자에 전달)
+3. helper function, 인자로 노드 받음
+   1. 그 노드에 왼쪽 노드가 있다면, helper에 왼쪽 노드 전달
+   2. 그 노드에 오른쪽 노드가 있다면, helper에 오른쪽 노드 전달
+   3. 노드값을 visited에 담기
+4. helper에 current 전달 후 호출
+5. visited 반환 
+
+```javascript
+class BinarySearchTree {
+    constructor {
+        this.root = null;
+    }
+    DFSPostOrder() {
+        let visited = [];
+        function traverse(node) {
+            if (node.left) traverse(node.left);
+            if (node.right) traverse(node.right);
+            visited.push(node.value);
+        }
+        traverse(this.root);
+        return visited;
+    }
+}
+```
+
+<br><br>
+
+#### DFS - InOrder (중위 순회)
+- (왼쪽 - 노드 - 오른쪽)재귀 - 루트
+- 루트가 중간에 위치
+- 재귀적
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Inorder-traversal.gif" width="600" height="330">
+
+<br>
+
+#### 중위 순회 구현
+1. 방문한 노드 저장할 visited 변수 생성
+2. BST의 루트를 저장할 current 변수 생성 (여기선 직접 인자에 전달)
+3. helper function, 인자로 노드 받음
+   1. 그 노드에 왼쪽 노드가 있다면, helper에 왼쪽 노드 전달
+   2. 노드값을 visited에 담기
+   3. 그 노드에 오른쪽 노드가 있다면, helper에 오른쪽 노드 전달
+4. helper에 current 전달 후 호출
+5. visited 반환 
+
+```javascript
+class BinarySearchTree {
+    constructor {
+        this.root = null;
+    }
+    DFSInOrder() {
+        let visited = [];
+        function traverse(node) {
+            if (node.left) traverse(node.left);
+            visited.push(node.value);
+            if (node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return visited;
+    }
+}
+```
+
+<br><br>
+
+#### DFS 비교
+**전위 순회(PreOrder)**
+- 맨 앞에 루트가 있기 때문에 트리를 복원할 때 좋다.
+
+**중위 순회(InOrder)**
+- BST를 오름차순으로 저장하고 싶을 때 좋다.
+
+> 하지만 결국 서로 바꾸기 아주 쉬운 것들이다.
+
+<br><br>
+
+### BFS vs DFS
+**시간복잡도**
+- 동일하다.
+ 
+<br>
+
+**공간복잡도**
+- 트리 구조에 따라 공간복잡도 차이 있다.
+- 트리의 폭이 넓다면
+  - BFS는 큐를 사용하고, 폭에 비례해서 저장공간이 필요하다
+  - 따라서 DFS가 유리
+- 트리의 깊이가 깊다면
+  - DFS는 재귀를 사용하고, 깊이에 비례해서 호출스택에 쌓임
+  - 따라서 BFS가 유리
+
+<br><br>
+
 ## Reference <!-- omit in toc -->
 [JavaScript 알고리즘 & 자료구조 마스터클래스](https://www.udemy.com/course/best-javascript-data-structures/)
+
+[File:Preorder-traversal.gif](https://commons.wikimedia.org/wiki/File:Preorder-traversal.gif)
+
+[File:Postorder-traversal.gif](https://commons.wikimedia.org/wiki/File:Postorder-traversal.gif)
+
+[File:Inorder-traversal.gif](https://commons.wikimedia.org/wiki/File:Inorder-traversal.gif)

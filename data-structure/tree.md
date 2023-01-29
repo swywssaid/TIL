@@ -11,20 +11,20 @@
     - [2.4. 이진 탐색 트리 구현1: Insert](#24-이진-탐색-트리-구현1-insert)
     - [2.5. 이진 탐색 트리 구현2: Find(Includes)](#25-이진-탐색-트리-구현2-findincludes)
     - [2.6. 이진 검색 트리 Big O](#26-이진-검색-트리-big-o)
-  - [Tree Traversal (트리 순회)](#tree-traversal-트리-순회)
-    - [트리 순회](#트리-순회)
-    - [BFS(Breadth Firsh Search, 너비 우선 탐색)](#bfsbreadth-firsh-search-너비-우선-탐색)
-      - [BFS란](#bfs란)
-      - [BFS 구현](#bfs-구현)
-    - [DFS(Depth Firsh Search, 깊이 우선 탐색)](#dfsdepth-firsh-search-깊이-우선-탐색)
-      - [DFS - PreOrder (전위 순회)](#dfs---preorder-전위-순회)
-      - [전위 순회 구현](#전위-순회-구현)
-      - [DFS - PostOrder (후위 순회)](#dfs---postorder-후위-순회)
-      - [후위 순회 구현](#후위-순회-구현)
-      - [DFS - InOrder (중위 순회)](#dfs---inorder-중위-순회)
-      - [중위 순회 구현](#중위-순회-구현)
-      - [DFS 비교](#dfs-비교)
-    - [BFS vs DFS](#bfs-vs-dfs)
+  - [3. Tree Traversal (트리 순회)](#3-tree-traversal-트리-순회)
+    - [3.1. 트리 순회](#31-트리-순회)
+    - [3.2. BFS(Breadth Firsh Search, 너비 우선 탐색)](#32-bfsbreadth-firsh-search-너비-우선-탐색)
+      - [3.2.1. BFS란](#321-bfs란)
+      - [3.2.2. BFS 구현](#322-bfs-구현)
+    - [3.3. DFS(Depth Firsh Search, 깊이 우선 탐색)](#33-dfsdepth-firsh-search-깊이-우선-탐색)
+      - [3.3.1. DFS - PreOrder (전위 순회)](#331-dfs---preorder-전위-순회)
+      - [3.3.2. 전위 순회 구현](#332-전위-순회-구현)
+      - [3.3.3. DFS - PostOrder (후위 순회)](#333-dfs---postorder-후위-순회)
+      - [3.3.4. 후위 순회 구현](#334-후위-순회-구현)
+      - [3.3.5. DFS - InOrder (중위 순회)](#335-dfs---inorder-중위-순회)
+      - [3.3.6. 중위 순회 구현](#336-중위-순회-구현)
+      - [3.3.7. DFS 비교](#337-dfs-비교)
+    - [3.4. BFS vs DFS](#34-bfs-vs-dfs)
 
 <br><br>
 
@@ -247,22 +247,22 @@ class BinarySearchTree {
 
 <br><br>
 
-## Tree Traversal (트리 순회)
-### 트리 순회
+## 3. Tree Traversal (트리 순회)
+### 3.1. 트리 순회
 - 특정 값을 찾기 위해선 모든 노드를 한 번씩 거쳐 가야 함
 - 크게 두 가지 방법이 있다 (탐색 방향을 뜻함)
   1. BFS(Breadth Firsh Search, 너비 우선 탐색)
   2. DFS(Depth Firsh Search, 깊이 우선 탐색)
 
-### BFS(Breadth Firsh Search, 너비 우선 탐색)
-#### BFS란
+### 3.2. BFS(Breadth Firsh Search, 너비 우선 탐색)
+#### 3.2.1. BFS란
 - 같은 레벨의 노드 순으로 거쳐가는 방법
 - 오른쪽, 왼쪽 방향은 중요하지 않다. 수평 방향인 것이 중요
 - 큐를 사용
 
 <br><br>
 
-#### BFS 구현
+#### 3.2.2. BFS 구현
 1. 큐와 노드 값을 방문한 노드들 저장할 변수 생성
 2. 큐에 루트 넣기
 3. 큐가 빌 때까지 루프
@@ -305,8 +305,8 @@ class BinaryTree {
 
 <br><br>
 
-### DFS(Depth Firsh Search, 깊이 우선 탐색)
-#### DFS - PreOrder (전위 순회)
+### 3.3. DFS(Depth Firsh Search, 깊이 우선 탐색)
+#### 3.3.1. DFS - PreOrder (전위 순회)
 - 루트 - (노드 - 왼쪽 - 오른쪽)재귀
 - 루트를 앞에 위치
 - 재귀적
@@ -315,7 +315,7 @@ class BinaryTree {
 
 <br>
 
-#### 전위 순회 구현
+#### 3.3.2. 전위 순회 구현
 1. 방문한 노드 저장할 visited 변수 생성
 2. BST의 루트를 저장할 current 변수 생성 (여기선 직접 인자에 전달)
 3. helper function, 인자로 노드 받음
@@ -345,7 +345,7 @@ class BinarySearchTree {
 
 <br><br>
 
-#### DFS - PostOrder (후위 순회)
+#### 3.3.3. DFS - PostOrder (후위 순회)
 - (왼쪽 - 오른쪽 - 노드)재귀 - 루트
 - 루트를 마지막에 위치
 - 재귀적
@@ -354,7 +354,7 @@ class BinarySearchTree {
 
 <br>
 
-#### 후위 순회 구현
+#### 3.3.4. 후위 순회 구현
 1. 방문한 노드 저장할 visited 변수 생성
 2. BST의 루트를 저장할 current 변수 생성 (여기선 직접 인자에 전달)
 3. helper function, 인자로 노드 받음
@@ -384,7 +384,7 @@ class BinarySearchTree {
 
 <br><br>
 
-#### DFS - InOrder (중위 순회)
+#### 3.3.5. DFS - InOrder (중위 순회)
 - (왼쪽 - 노드 - 오른쪽)재귀 - 루트
 - 루트가 중간에 위치
 - 재귀적
@@ -393,7 +393,7 @@ class BinarySearchTree {
 
 <br>
 
-#### 중위 순회 구현
+#### 3.3.6. 중위 순회 구현
 1. 방문한 노드 저장할 visited 변수 생성
 2. BST의 루트를 저장할 current 변수 생성 (여기선 직접 인자에 전달)
 3. helper function, 인자로 노드 받음
@@ -423,7 +423,7 @@ class BinarySearchTree {
 
 <br><br>
 
-#### DFS 비교
+#### 3.3.7. DFS 비교
 **전위 순회(PreOrder)**
 - 맨 앞에 루트가 있기 때문에 트리를 복원할 때 좋다.
 
@@ -434,7 +434,7 @@ class BinarySearchTree {
 
 <br><br>
 
-### BFS vs DFS
+### 3.4. BFS vs DFS
 **시간복잡도**
 - 동일하다.
  

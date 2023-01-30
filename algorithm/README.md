@@ -2,7 +2,7 @@
 
 ## Algorithm Efficiency
 - [Algorithm Efficiency (Big-O, Big-Ω, Big-θ)](https://github.com/swywssaid/TIL/blob/main/algorithm/algorithm-efficiency.md)
-- [problem solving (문제 해결)](https://github.com/swywssaid/TIL/blob/main/algorithm/problem-solving.md)
+- [Problem solving (문제 해결)](https://github.com/swywssaid/TIL/blob/main/algorithm/problem-solving.md)
 - [Recursion (재귀 함수)](https://github.com/swywssaid/TIL/blob/main/algorithm/recursion.md)
 
 <br><br>

@@ -211,7 +211,8 @@ function isAlphaNumeric(char) {
 }
 ```
 > 정규 표현식을 사용하면 55% 더 느리다. 하지만 이걸 떠올리라는 말은 아니다. 면접을 마치며 사족을 다는 정도면 됨.
-<img src="..\image\algorithm\solving-approach/charCodeAt-regexp.png" width="200" height="200">  
+
+<img src="..\image\algorithm\solving-approach/charCodeAt-regexp.png" width="500" height="350">  
 
 <br><br>
 

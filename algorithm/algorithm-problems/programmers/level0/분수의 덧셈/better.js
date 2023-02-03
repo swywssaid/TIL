@@ -1,4 +1,4 @@
-// 최대공약수 ( a > b )
+// 최대공약수 ( a > b ): 유클리드 호제법
 function fnGCD(a, b) {
   return a % b ? fnGCD(b, a % b) : b;
 }

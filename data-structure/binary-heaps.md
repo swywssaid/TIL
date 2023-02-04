@@ -35,6 +35,37 @@
  
 <br><br>
 
+## 이진힙 구현
+### insert
+- 최대이진힙을 구현해보자
+
+```javascript
+class MaxBianryHeap {
+  constructor() {
+    this.values = [];
+  }
+  insert(element) {
+    this.values.push(element);
+    this.bubbleUp();
+  }
+  bubbleUp() {
+    let idx = this.values.length - 1;
+    const element = this.values[idx];
+    while(idx > 0) {
+      let parentIdx = Math.floor((idx - 1) / 2);
+      let parent = this.values[parentIdx];
+      if (element <= parent) break;
+      this.values[parentIdx] = element;
+      this.values[idx] = parent;
+      idx = parentIdx;
+    }
+  }
+}
+
+```
+
+<br><br>
+
 ## Reference <!-- omit in toc -->
 [힙 (자료 구조)](https://ko.wikipedia.org/wiki/%ED%9E%99_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0))
 

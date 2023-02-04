@@ -1,8 +1,16 @@
-# Binary Heaps (이진 힙)
+# Binary Heaps (이진 힙) <!-- omit in toc -->
+
+- [1. Heaps (힙)](#1-heaps-힙)
+- [2. Binary Heaps (이진 힙)](#2-binary-heaps-이진-힙)
+  - [2.1. 이진 힙을 배우는 이유](#21-이진-힙을-배우는-이유)
+  - [2.2. 힙 정렬](#22-힙-정렬)
+  - [2.3. 이진힙 구현](#23-이진힙-구현)
+    - [2.3.1. insert](#231-insert)
+    - [2.3.2. remove (extractMax)](#232-remove-extractmax)
 
 <br><br>
 
-## Heaps (힙)
+## 1. Heaps (힙)
 - 힙 속성을 지닌 완전 트리 구조이다
 - 완전 트리: 마지막 레벨을 제외하고 완전히 채워져 있는 트리
   - 마지막 레벨의 경우, 왼쪽부터 채운다.
@@ -12,7 +20,7 @@
 
 <br><br>
 
-## Binary Heaps (이진 힙)
+## 2. Binary Heaps (이진 힙)
 - 힙 속성을 지닌 완전 이진 트리 구조이다.
 - 부모와 자식 노드 간에 대소관계가 존재한다.
   - 최대이진힙의 경우 부모 노드가 자녀 노드보다 크다.
@@ -20,13 +28,13 @@
 
 <br><br>
 
-## 이진 힙을 배우는 이유
+### 2.1. 이진 힙을 배우는 이유
 - 우선 순위 큐에 사용
 - 그래프 순회 알고리즘에 사용
 
 <br><br>
 
-## 힙 정렬
+### 2.2. 힙 정렬
 - 배열의 인덱스: n  
   - 왼쪽 자녀: 2n + 1  
   - 오른쪽 자녀: 2n + 2  
@@ -35,8 +43,8 @@
  
 <br><br>
 
-## 이진힙 구현
-### insert
+### 2.3. 이진힙 구현
+#### 2.3.1. insert
 - 최대이진힙을 구현해보자
 
 ```javascript
@@ -64,7 +72,7 @@ class MaxBianryHeap {
 
 ```
 
-### remove (extractMax)
+#### 2.3.2. remove (extractMax)
 
 ```javascript
 class MaxBianryHeap {

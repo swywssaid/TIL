@@ -5,3 +5,6 @@ function solution(my_string) {
 }
 
 solution("1234");
+/*
+복습1: reverse 메소드
+*/

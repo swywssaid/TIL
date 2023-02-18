@@ -16,4 +16,5 @@ console.log(myHonda, myCar, newCar);
 
 
 마지막 인자 안넣으면 배열 끝까지.
+복습1: splice and slice
 */

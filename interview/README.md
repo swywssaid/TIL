@@ -16,4 +16,5 @@
 <br><br>
 
 ## 중요도4
-[브라우저 저장소의 차이점](https://github.com/swywssaid/TIL/blob/main/interview/browser/storage.md) - 브라우저 저장소의 차이점에 대해 설명해주세요.(LocalStorage,SessionStorage,Cookie)
+- [브라우저 저장소의 차이점](https://github.com/swywssaid/TIL/blob/main/interview/browser/storage.md) - 브라우저 저장소의 차이점에 대해 설명해주세요.(LocalStorage,SessionStorage,Cookie)  
+- [서버 사이드 렌더링 vs 클라이언트 사이드 렌더링](https://github.com/swywssaid/TIL/blob/main/interview/browser/CSR-SSR.md)

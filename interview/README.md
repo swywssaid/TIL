@@ -16,4 +16,4 @@
 <br><br>
 
 ## 중요도4
-브라우저 저장소의 차이점 - 브라우저 저장소의 차이점에 대해 설명해주세요.(LocalStorage,SessionStorage,Cookie)
+[브라우저 저장소의 차이점](https://github.com/swywssaid/TIL/blob/main/interview/browser/storage.md) - 브라우저 저장소의 차이점에 대해 설명해주세요.(LocalStorage,SessionStorage,Cookie)

@@ -37,14 +37,23 @@
 
 <br><br>
 
-## 루트 컴포넌트 파일
+- [Importing and Exporting Components](#importing-and-exporting-components)
+  - [1. 루트 컴포넌트 파일](#1-루트-컴포넌트-파일)
+  - [2. 컴포넌트를 가져오고 내보내기](#2-컴포넌트를-가져오고-내보내기)
+  - [3. 한 파일에서 여러 컴포넌트를 가져오고 내보내는 방법](#3-한-파일에서-여러-컴포넌트를-가져오고-내보내는-방법)
+    - [3.1. 한 파일에 default and named export 같이 사용하기](#31-한-파일에-default-and-named-export-같이-사용하기)
+    - [3.2. 한 파일에 default and named export 같이 사용 안 하기 (파일 분리하기)](#32-한-파일에-default-and-named-export-같이-사용-안-하기-파일-분리하기)
+
+<br><br>
+
+## 1. 루트 컴포넌트 파일
 - `create-react-app` 시 앱은 `src/App.js` 에 있다
   - 설정에 따라 다르다, 다른 파일에 있을 수도 있음
 - Next.js처럼 파일 기반 라우팅 프레임워크에선, 루트 컴포넌트는 모든 페이지마다 다르다
 
 <br><br>
 
-## 컴포넌트를 가져오고 내보내기
+## 2. 컴포넌트를 가져오고 내보내기
 - 컴포넌트를 여러 파일에서 사용해야 한다면 루트 컴포넌트 파일에서 분리하여 관리한다
 1. 컴포넌트를 넣을 JS 파일 생성
 2. `export` : 컴포넌트를 내보낸다(using either [default or named exports](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/export#using_named_exports))
@@ -65,7 +74,7 @@ export default function App() {
 
 <br><br>
 
-## 한 파일에서 여러 컴포넌트를 가져오고 내보내는 방법
+## 3. 한 파일에서 여러 컴포넌트를 가져오고 내보내는 방법
 - 한 파일에선 하나의 default export를 사용하거나, 여러개의 named exports를 사용할 수 있다
 
 > 어떤 방식을 사용하는 지는 선호 문제
@@ -88,7 +97,7 @@ export default function App() {
 
 <br><br>
 
-### 한 파일에 default and named export 같이 사용하기
+### 3.1. 한 파일에 default and named export 같이 사용하기
 
 ```jsx
 // App.js
@@ -127,7 +136,7 @@ export default function Gallery() {
 
 <br><br>
 
-### 한 파일에 default and named export 같이 사용 안 하기 (파일 분리하기)
+### 3.2. 한 파일에 default and named export 같이 사용 안 하기 (파일 분리하기)
 
 ```jsx
 // App.js
@@ -171,7 +180,7 @@ export default function Profile() {
 
 <br><br>
 
-## Reference
+## Reference <!-- omit in toc -->
 [Importing and Exporting Components](https://beta.reactjs.org/learn/importing-and-exporting-components)
 
 [export](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/export#using_named_exports)

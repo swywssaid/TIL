@@ -1,4 +1,4 @@
-# JavaScript In JSX With Curly Braces
+# JavaScript In JSX With Curly Braces 
 
 > 학습목표  
 > <details>
@@ -22,7 +22,13 @@
 
 <br><br>
 
-## JSX에서 중괄호 사용 방법 2가지
+- [JavaScript In JSX With Curly Braces](#javascript-in-jsx-with-curly-braces)
+  - [1. JSX에서 중괄호 사용 방법 2가지](#1-jsx에서-중괄호-사용-방법-2가지)
+  - [2. 이중 중괄호: CSS와 객체](#2-이중-중괄호-css와-객체)
+
+<br><br>
+
+## 1. JSX에서 중괄호 사용 방법 2가지
 1. JSX 태그 안에 텍스트 직접 전달
 - `<h1>{name}'s To Do List</h1>`
 - `<{tag}>Gregorio Y. Zara's To Do List</{tag}>`는 안 됨
@@ -33,7 +39,7 @@
 
 <br><br>
 
-## 이중 중괄호: CSS와 객체
+## 2. 이중 중괄호: CSS와 객체
 - 문자열, 숫자 등을 비롯해 객체 역시 JSX에 전달 가능하다.
 - 객체는 중괄호를 사용하기에 이중 중괄호가 된다.
   - 인라인 CSS를 권장하진 않는다.

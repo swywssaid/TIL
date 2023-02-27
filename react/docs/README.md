@@ -6,3 +6,4 @@
 2. [Importing and Exporting Components](https://github.com/swywssaid/TIL/blob/main/react/docs/ImportingandExportingComponents.md)
 3. [Writing Markup with JSX](https://github.com/swywssaid/TIL/blob/main/react/docs/WritingMarkupwithJSX.md)
 4. [JavaScript in JSX with Curly Braces](https://github.com/swywssaid/TIL/blob/main/react/docs/JavaScriptInJSXWithCurlyBraces.md)
+5. [Passing Props to a Component](https://github.com/swywssaid/TIL/blob/main/react/docs/PassingPropstoaComponent.md)

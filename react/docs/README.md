@@ -8,3 +8,4 @@
 4. [JavaScript in JSX with Curly Braces](https://github.com/swywssaid/TIL/blob/main/react/docs/JavaScriptInJSXWithCurlyBraces.md)
 5. [Passing Props to a Component](https://github.com/swywssaid/TIL/blob/main/react/docs/PassingPropstoaComponent.md)
 6. [Conditional Rendering](https://github.com/swywssaid/TIL/blob/main/react/docs/ConditionalRendering.md)
+7. [Rendering Lists](https://github.com/swywssaid/TIL/blob/main/react/docs/RenderingLists.md)

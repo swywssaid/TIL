@@ -9,3 +9,4 @@
 5. [Passing Props to a Component](https://github.com/swywssaid/TIL/blob/main/react/docs/PassingPropstoaComponent.md)
 6. [Conditional Rendering](https://github.com/swywssaid/TIL/blob/main/react/docs/ConditionalRendering.md)
 7. [Rendering Lists](https://github.com/swywssaid/TIL/blob/main/react/docs/RenderingLists.md)
+8. [Keeping Components Pure](https://github.com/swywssaid/TIL/blob/main/react/docs/KeepingComponentsPure.md)

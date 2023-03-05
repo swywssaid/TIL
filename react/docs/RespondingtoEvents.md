@@ -30,3 +30,7 @@
 - 짧은 함수는 화살표 함수로 전달하기도 한다
 
 > 이벤트 핸들러는 호출하는 것이 아닌 전달하는 것이다!!
+
+| passing a function (correct)     | calling a function (incorrect)     |
+| -------------------------------- | ---------------------------------- |
+| `<button onClick={handleClick}>` | `<button onClick={handleClick()}>` |

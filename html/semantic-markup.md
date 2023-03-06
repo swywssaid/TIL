@@ -3,6 +3,7 @@
 - [Semantic Markup](#semantic-markup)
   - [1. Semantic Markup](#1-semantic-markup)
   - [2. 시멘틱 마크업 하기](#2-시멘틱-마크업-하기)
+  - [HTML5 시멘틱 요소](#html5-시멘틱-요소)
 
 <br><br>
 
@@ -24,5 +25,27 @@
 
 <br><br>
 
+## HTML5 시멘틱 요소
+- HTML5에서 새로 생긴 Sematic 요소들
+```html
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+```
+
+<br><br>
+
 ## Reference<!-- omit in toc -->
 [비전공자를 위한 HTML/CSS](https://www.boostcourse.org/cs120)
+
+[Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)

@@ -1,6 +1,18 @@
 # Content Model
 
-## Content Models
+- [Content Model](#content-model)
+  - [1. Content Models](#1-content-models)
+  - [2. Metadata](#2-metadata)
+  - [3. Flow](#3-flow)
+  - [4. Sectioning](#4-sectioning)
+  - [5. Heading](#5-heading)
+  - [6. Phrasing](#6-phrasing)
+  - [7. Embedded](#7-embedded)
+  - [8. Interactive](#8-interactive)
+
+<br><br>
+
+## 1. Content Models
 - 요소들의 성격에 따라 그룹화시킨 모델
 - Content Models 의 7 분류  
 1. Metadata Content
@@ -15,7 +27,7 @@
 
 <br><br>
 
-## Metadata 
+## 2. Metadata 
 - 콘텐츠의 스타일, 동작을 설정하거나 다른 문서와의 관계 등 정보를 포함하는 요소
 
 >대부분 `<head>`내에 들어간다는 것이 특징  
@@ -23,7 +35,7 @@
 
 <br><br>
 
-## Flow
+## 3. Flow
 - 문서의 자연스러운 흐름에 의해 배치되는 요소
 
 > Metadata에 해당하는 일부 태그들만 Flow에서 제외되며 요소 대부분이 Flow에 포함   
@@ -36,7 +48,7 @@ style[scoped], sub, sup, svg, table, textarea, time, ul, var, video, wbr
 
 <br><br>
 
-## Sectioning 
+## 4. Sectioning 
 - 문서의 구조와 관련된 요소
 
 > 문서의 구조, 아웃라인에 영향  
@@ -44,14 +56,14 @@ style[scoped], sub, sup, svg, table, textarea, time, ul, var, video, wbr
  
 <br><br>
 
-## Heading 
+## 5. Heading 
 -  section의 header를 정의
 
 > h1, h2, h3, h4, h5, h6
 
 <br><br>
 
-## Phrasing 
+## 6. Phrasing 
 - 문서의 텍스트 또는 텍스트를 꾸며주는 문단 내부 레벨로 사용되는 요소
 
 > a, abbr, map>area, audio, b, bdo, br, button, canvas, cite, code, datalist, del, dfn, em, embed,
@@ -61,7 +73,7 @@ var, video, wbr
 
 <br><br>
 
-## Embedded 
+## 7. Embedded 
 -  외부 콘텐츠를 표현하는 요소
 
 > 오디오나 비디오, 이미지 등 멀티미디어 관련 요소  
@@ -69,7 +81,7 @@ var, video, wbr
 
 <br><br>
 
-## Interactive 
+## 8. Interactive 
 - 사용자와 상호작용을 하는 요소
 
 > 대표적으로 form 요소  
@@ -78,7 +90,7 @@ object[usemap], select, textarea, video[controls]
 
 <br><br>
 
-## Reference
+## Reference<!-- omit in toc -->
 [콘텐츠 모델](https://www.boostcourse.org/cs120)
 
 [콘텐츠 카테고리](https://developer.mozilla.org/ko/docs/Web/HTML/Content_categories)

@@ -34,3 +34,5 @@
 | passing a function (correct)     | calling a function (incorrect)     |
 | -------------------------------- | ---------------------------------- |
 | `<button onClick={handleClick}>` | `<button onClick={handleClick()}>` |
+
+## 

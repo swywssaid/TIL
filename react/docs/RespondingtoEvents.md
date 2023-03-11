@@ -35,4 +35,19 @@
 | -------------------------------- | ---------------------------------- |
 | `<button onClick={handleClick}>` | `<button onClick={handleClick()}>` |
 
-## 
+<br><br>
+
+## 이벤트 핸들러 props 네이밍
+- `on` 으로 시작한다. (e.g. onSmash, onPlayMovie)
+
+<br><br>
+
+## 이벤트 전파     
+- 이벤트 핸들러는 컴포넌트가 가질 수 있는 자녀의 이벤트를 포착할 수 있다
+  - 이를 이벤트가 트리 위로 "bubbles"(거품) or "propagetes"(전파)된다고 한다
+  - 발생 위치에서 트리 위로 올라감
+
+<br><br>
+
+## Reference
+[Responding to Events](https://beta.reactjs.org/learn/responding-to-events#naming-event-handler-props)

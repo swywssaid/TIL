@@ -47,6 +47,59 @@
   - 이를 이벤트가 트리 위로 "bubbles"(거품) or "propagetes"(전파)된다고 한다
   - 발생 위치에서 트리 위로 올라감
 
+```jsx
+// 버튼 클릭 시: 버튼 -> 툴바
+export default function Toolbar() {
+  return (
+    <div className="Toolbar" onClick={() => {
+      alert('You clicked on the toolbar!');
+    }}>
+      <button onClick={() => alert('Playing!')}>
+        Play Movie
+      </button>
+      <button onClick={() => alert('Uploading!')}>
+        Upload Image
+      </button>
+    </div>
+  );
+}
+```
+> 우리가 부착한 JSX 태그에서 작동하는 `onScroll`를 제외한 모든 이벤트가 전파된다
+
+<br><br>
+
+## 전파 중단하기
+- 이벤트 핸들러는 이벤트 객체를 인자로 받고 `e`로 보통 부른다.
+- 부모 컴포넌트로의 전파를 막을 수 있다.
+
+```jsx
+function Button({ onClick, children }) {
+  return (
+    <button onClick={e => {
+      e.stopPropagation();
+      onClick();
+    }}>
+      {children}
+    </button>
+  );
+}
+
+export default function Toolbar() {
+  return (
+    <div className="Toolbar" onClick={() => {
+      alert('You clicked on the toolbar!');
+    }}>
+      <Button onClick={() => alert('Playing!')}>
+        Play Movie
+      </Button>
+      <Button onClick={() => alert('Uploading!')}>
+        Upload Image
+      </Button>
+    </div>
+  );
+}
+
+```
 <br><br>
 
 ## Reference

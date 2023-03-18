@@ -100,6 +100,16 @@ export default function Toolbar() {
 }
 
 ```
+
+<br><br>
+
+### 이벤트 점파 3단계
+1. 아래로 내려가면서, `onClickCapture`핸들러를 호출한다
+2. 클릭한 요소의 `onClick`핸들러를 실행한다
+3. 위로 올라가면서, `onClick`핸들러를 실행한다  
+
+> capture 이벤트는 라우터나 분석에 유용하고 앱 코드 안에선 아마 사용 안 할 것
+
 <br><br>
 
 ## Reference

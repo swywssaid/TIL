@@ -15,3 +15,7 @@
 
 ### Adding Interactivity
 1. [Responding to Events](https://github.com/swywssaid/TIL/blob/main/react/docs/RespondingtoEvents.md)
+
+
+### Escape Hatches
+1. [Referencing Values with Refs](https://github.com/swywssaid/TIL/blob/main/react/docs/ReferencingValueswithRefs.md)

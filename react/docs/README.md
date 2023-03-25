@@ -19,3 +19,5 @@
 
 ### Escape Hatches
 1. [Referencing Values with Refs](https://github.com/swywssaid/TIL/blob/main/react/docs/ReferencingValueswithRefs.md)
+
+2. Manipulating the DOM with Refs

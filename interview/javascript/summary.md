@@ -21,8 +21,30 @@
 
 <br><br>
 
+## 실행 컨텍스트란 무엇인가요?
+- 실행 컨텍스트는 자바스크립트 코드가 실행될 때 생성되는 실행 환경이며 객체로서 실행 컨텍스트 스택에 쌓여서 실행됩니다.
+- 실행 컨텍스트의 구성요소로는 3가지로 Variable Environment, Lexical Environment, this 바인딩이 있습니다.
+
+<br>
+
+### 구성요소에 대한 설명해주세요
+- 구성요소로는 3가지로 Variable Environment, Lexical Environment, this 바인딩이 있습니다
+- Variable Environment는 Lexical Environment와 동일한 성격을 띠지만 값의 변화를 추적하는 지에 차이가 있습니다.
+- Variable Environment는 값의 변화를 추적하지 않고 최초 실행 시의 스냅샷을 유지합니다.
+- Lexical Environment는 값의 변화를 추적하여 식별자 정보를 가지게 됩니다.
+- this 바인딩은 실행 컨텍스트가 생성될 때마다 this 객체에 어떻게 바인딩이 되는지를 나타낸 것입니다
+
+<br>
+
+### Lexical Environment의 구성요소에 대해 설명해주세요
+- Lexical Environment의 구성요소는 2가지로 Environment Record, outer 참조가 있습니다.
+- Environment Record에는 현재 문맥의 식별자 정보가 담기고 이 과정을 호이스팅이라고 합니다.
+- outer 참조는 외부 Lexical Environment를 참조하는 포인터입니다. 이 과정을 스코프 체인이라고 합니다.
+
+<br><br>
+
 ## 호이스팅이 무엇인가?
-- 호이스팅 (hoisting)이란, 변수 및 함수 선언문이 스코프 내의 최상단으로 끌어올려지는 현상으로 메모리 공간을 미리 할당하는 방식을 의미합니다.
+- 호이스팅 (hoisting)이란, 현재 문맥의 식별자를 위한 메모리 공간을 미리 할당하는 방식을 의미합니다. 이는 편의상 실행 컨텍스트의 최상단으로 끌어올려지는 것으로 간주할 수 있습니다.
 
 <br>
 
@@ -32,20 +54,14 @@
 
 <br><br>
 
-## 실행 컨텍스트란 무엇인가요?
-- 실행 컨텍스트는 자바스크립트 코드가 실행될 때 생성되는 실행 환경이며 객체로서 실행 컨텍스트 스택에 쌓여서 실행됩니다.
-- 실행 컨텍스트는 Creation Phase (생성단계) Execution Phase (실행단계) 2가지 과정을 거칩니다. 
-
-<br><br>
-
 ## 스코프란 무엇인가?
-- 스코프란 자바스크립트 엔진이 참조의 대상이 되는 식별자(Identifier)를 검색할 때 사용하는 규칙의 집합입니다
+- 스코프란 식별자의 유효범위로서, 자바스크립트 엔진이 참조의 대상이 되는 식별자(Identifier)를 검색할 때 사용하는 규칙의 집합입니다
 - 즉, 어떤 변수를 사용하거나 함수를 호출하려고 할 때 해당하는 식별자로 사용하는데, 그 식별자를 검색하는 메커니즘이라고 이해하면 된다.
 
 <br>
 
 ### 스코프 체인이 무엇인가?
-- 현재 스코프에서 식별자를 검색할 때 상위 스코프를 연쇄적으로 찾아나가는 방식 을 말한다. 실행 컨텍스트를 배웠다면 생성될 때마다 LexicalEnvironment가 만들어지고 그 안에 outer 참조 값이 있다는 것을 알 것이다. 바로 이 outer 참조 값이 상위 스코프의 LexicalEnvironment를 가리키기 때문에 이를 통해 체인처럼 연결되는 것이다.
+- 현재 스코프에서 식별자를 검색할 때 상위 스코프로 연쇄적으로 찾아나가는 방식을 말합니다. 실행 컨텍스트를 배웠다면 생성될 때마다 LexicalEnvironment가 만들어지고 그 안에 outer 참조 값이 있다는 것을 알 것이다. 바로 이 outer 참조 값이 상위 스코프의 LexicalEnvironment를 가리키기 때문에 이를 통해 체인처럼 연결되는 것이다.
 
 즉, 다음과 같은 과정으로 스코프 체인을 검색한다.
 
@@ -65,15 +81,15 @@
 
 <br><br>
 
-## 클로저란 무엇인가?
-- 클로저란 함수가 선언된 시점에서의 렉시컬 스코프를 기억하여 참조할 수 있는 함수입니다.
-
-<br><br>
-
 ## let과 const, var의 차이점은 무엇인가요?
 - 스코프, 호이스팅 시점
 - var는 변수 재선언이 가능하며, let과 const는 불가능합니다. var과 let은 변수에 값을 재할당 할 수 있지만 const는 불가능합니다.
 - var는 함수 레벨 스코프의 적용 대상이며 let과 const는 블록 레벨 스코프의 적용 대상입니다. 따라서 함수가 아닌 곳에서 var를 선언한다면 전역변수로 취급됩니다. 이러한 var의 특징은 코드가 복잡해지는 경우 유지보수 난이도를 높이는 요소가 됩니다.
+
+<br><br>
+
+## 클로저란 무엇인가?
+- 클로저란 함수가 선언된 시점에서의 렉시컬 스코프를 기억하여 참조할 수 있는 함수입니다.
 
 <br><br>
 
@@ -83,18 +99,6 @@
 - stopPropagation을 이용하면 위와 같은 버블링과 캡쳐링의 이벤트 전파를 막을 수 있습니다. 버블링의 경우 클릭한 요소의 이벤트만, 캡쳐링의 경우에는 클릭한 요소의 최상위 요소의 이벤트만 동작됩니다.
 
 <br><br>
-
-
-<br>
-
-### 구성요소에 대한 설명해주세요
-- 구성요소로는 Lexical Environment, Variable Environment, this 바인딩 3가지가 있습니다
-- (렉시컬 환경)Lexical Environment은 변수 및 함수 등의 식별자(Identifier) 및 외부 참조에 관한 정보를 가지고 있는 컴포넌트입니다.
-- Variable Environment는 Lexical Environment와 동일한 성격을 띠지만 var 로 선언된 변수만 저장한다는 점에서 다릅니다.
-- this의 바인딩은 실행 컨텍스트가 생성될 때마다 this 객체에 어떻게 바인딩이 되는지를 나타낸 것입니다
-
-<br><br>
-
 
 ## 자바스크립트 이벤트 루프
 - 이벤트 루프는 자바스크립트에서 비동기(asynchronous) 작업을 처리하기 위해 사용됩니다. 이벤트 루프는 크게 Call Stack(호출 스택), Web API, Callback Queue(콜백 큐) 세 가지 요소로 이루어져 있습니다.
@@ -118,6 +122,8 @@
 
 ## Async/Await
 - Async/Await는 비동기적인 작업을 처리할 때 사용하는 문법으로 Async 함수에서 Await 키워드를 사용하여 비동기적인 작업을 기다린 후 결과값을 반환합니다.
+- await은 Promise 객체가 처리될 때까지 함수를 일시 중지시킵니다. 이후 Promise 객체 처리 시 결과값을 받환받고 거부 시 함수 실행이 중지됩니다.
+- 에러 핸들링은 주로 try-catch로 하게 됩니다.
 - async/await의 가장 큰 장점은 Promise보다 높은 가독성입니다.
 
 <br><br>
@@ -131,3 +137,7 @@
 [취준생이 반드시 알아야 할 프론트엔드 지식들](https://github.com/baeharam/Must-Know-About-Frontend#computer-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%A0%84%EB%B0%98)
 
 [Interview_Question_for_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/JavaScript)
+
+[자바스크립트 실행 컨텍스트](https://junilhwang.github.io/TIL/Javascript/Domain/Execution-Context/#_2-%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC-%E1%84%8F%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%90%E1%85%B3-%E1%84%80%E1%85%AE%E1%84%89%E1%85%A5%E1%86%BC)
+
+[코어 자바스크립트](https://www.inflearn.com/course/%ED%95%B5%EC%8B%AC%EA%B0%9C%EB%85%90-javascript-flow/dashboard)

@@ -1,35 +1,37 @@
-- [IETF (국제 인터넷 표준화 기구, Internet Engineering Task Force)](#ietf-국제-인터넷-표준화-기구-internet-engineering-task-force)
-  - [IETF RFC](#ietf-rfc)
-- [NETWORK SECURITY](#network-security)
-  - [기밀성 (Confidentiality)](#기밀성-confidentiality)
-  - [인증 (Authentication)](#인증-authentication)
-  - [무결성 (Integrity)](#무결성-integrity)
-- [Firewall](#firewall)
-  - [Stateless packet filtering](#stateless-packet-filtering)
-  - [Stateful packet filtering](#stateful-packet-filtering)
-- [OSI Model vs. TCP/IP Protocol Suite](#osi-model-vs-tcpip-protocol-suite)
-- [네트워크 구성](#네트워크-구성)
-  - [네트워크 엣지 (Network edge)](#네트워크-엣지-network-edge)
-  - [엑세스 네트워크 (Access network)](#엑세스-네트워크-access-network)
-  - [네트워크 코어 (Network core)](#네트워크-코어-network-core)
-  - [Network of networks](#network-of-networks)
-- [종단간(E2EE,End to End Encryption)](#종단간e2eeend-to-end-encryption)
-- [Performance](#performance)
-  - [Delay](#delay)
-  - [Loss](#loss)
-  - [Throughput](#throughput)
-  - [security](#security)
-- [ARPANET(Advanced Research Projects Agency Network)](#arpanetadvanced-research-projects-agency-network)
-  - [Layer들마다 기능이 어느 정도 겹친다. transport layer만의 장점(특성이었나?) 2가지](#layer들마다-기능이-어느-정도-겹친다-transport-layer만의-장점특성이었나-2가지)
-  - [TCP/IP 모델 관련 문제(단순히 설명하시오는 아니었는데 어쨌든 이거 관련이었습니다)](#tcpip-모델-관련-문제단순히-설명하시오는-아니었는데-어쨌든-이거-관련이었습니다)
-  - [통신이 이루어지고 있는 그림을 준다. 그래서 어떤 세션에서는 메시지 전송이 안되고 그 사실이 전송자에게는 전달이 되지 않은 상태에서 전송자는 계속 메시지를 보내고 있다.(이것들은 다 그림으로 되어 있는데 그냥 말로 적은 거에요) 특정 세션 이후에 예상되는 통신을 그리시오](#통신이-이루어지고-있는-그림을-준다-그래서-어떤-세션에서는-메시지-전송이-안되고-그-사실이-전송자에게는-전달이-되지-않은-상태에서-전송자는-계속-메시지를-보내고-있다이것들은-다-그림으로-되어-있는데-그냥-말로-적은-거에요-특정-세션-이후에-예상되는-통신을-그리시오)
-  - [Layer 분할의 장점들과 단점들](#layer-분할의-장점들과-단점들)
+- [1. IETF (국제 인터넷 표준화 기구, Internet Engineering Task Force)](#1-ietf-국제-인터넷-표준화-기구-internet-engineering-task-force)
+  - [1.1. IETF RFC](#11-ietf-rfc)
+- [2. NETWORK SECURITY](#2-network-security)
+  - [2.1. 기밀성 (Confidentiality)](#21-기밀성-confidentiality)
+  - [2.2. 인증 (Authentication)](#22-인증-authentication)
+  - [2.3. 무결성 (Integrity)](#23-무결성-integrity)
+- [3. Firewall](#3-firewall)
+  - [3.1. Stateless packet filtering](#31-stateless-packet-filtering)
+  - [3.2. Stateful packet filtering](#32-stateful-packet-filtering)
+- [4. OSI Model vs. TCP/IP Protocol Suite](#4-osi-model-vs-tcpip-protocol-suite)
+- [5. 네트워크 구성](#5-네트워크-구성)
+  - [5.1. 네트워크 엣지 (Network edge)](#51-네트워크-엣지-network-edge)
+  - [5.2. 엑세스 네트워크 (Access network)](#52-엑세스-네트워크-access-network)
+  - [5.3. 네트워크 코어 (Network core)](#53-네트워크-코어-network-core)
+  - [5.4. Network of networks](#54-network-of-networks)
+- [6. 종단간(E2EE,End to End Encryption)](#6-종단간e2eeend-to-end-encryption)
+- [7. Performance](#7-performance)
+  - [7.1. Delay](#71-delay)
+  - [7.2. Loss](#72-loss)
+  - [7.3. Throughput](#73-throughput)
+  - [7.4. security](#74-security)
+- [8. ARPANET(Advanced Research Projects Agency Network)](#8-arpanetadvanced-research-projects-agency-network)
+  - [8.1. Layer들마다 기능이 어느 정도 겹친다. transport layer만의 장점(특성이었나?) 2가지](#81-layer들마다-기능이-어느-정도-겹친다-transport-layer만의-장점특성이었나-2가지)
+  - [8.2. TCP/IP 모델 관련 문제(단순히 설명하시오는 아니었는데 어쨌든 이거 관련이었습니다)](#82-tcpip-모델-관련-문제단순히-설명하시오는-아니었는데-어쨌든-이거-관련이었습니다)
+  - [8.3. 통신이 이루어지고 있는 그림을 준다. 그래서 어떤 세션에서는 메시지 전송이 안되고 그 사실이 전송자에게는 전달이 되지 않은 상태에서 전송자는 계속 메시지를 보내고 있다.(이것들은 다 그림으로 되어 있는데 그냥 말로 적은 거에요) 특정 세션 이후에 예상되는 통신을 그리시오](#83-통신이-이루어지고-있는-그림을-준다-그래서-어떤-세션에서는-메시지-전송이-안되고-그-사실이-전송자에게는-전달이-되지-않은-상태에서-전송자는-계속-메시지를-보내고-있다이것들은-다-그림으로-되어-있는데-그냥-말로-적은-거에요-특정-세션-이후에-예상되는-통신을-그리시오)
+  - [8.4. Layer 분할의 장점들과 단점들](#84-layer-분할의-장점들과-단점들)
 
-## IETF (국제 인터넷 표준화 기구, Internet Engineering Task Force)
+## 1. IETF (국제 인터넷 표준화 기구, Internet Engineering Task Force)
 
 - IETF는 인터넷의 운영, 관리, 개발에 대해 협의하고 프로토콜과 구조적인 사안들을 분석하는 인터넷 표준화 작업기구이다.
 
-### IETF RFC
+<br>
+
+### 1.1. IETF RFC
 
 - IETF에서 사용하는 문서로 인터넷 기술 사양 및 조직 정보가 포함되어 있다.
 - RFCs는 이후로 인터넷 사양, 통신 프로토콜, 프로시저 및 이벤트의 공식 문서로 채택되었습니다.
@@ -39,36 +41,44 @@
 ◆ RFC793: TCP, September 1981
 ◆ RFC2460 IPv6, December 1998
 
-## NETWORK SECURITY
+<br><br>
+
+## 2. NETWORK SECURITY
 
 1. 기밀성 (Confidentiality)
 2. 무결성 (Integrity)
 3. 가용성 (Availability)
 
-### 기밀성 (Confidentiality)
+<br>
+
+### 2.1. 기밀성 (Confidentiality)
 
 발신자와 의도된 수신자만이 메시지 내용을 이해해야 합니다.
 
 - 발신자가 메시지를 암호화합니다.
 - 수신자가 메시지를 해독(복호화)합니다.
 
-### 인증 (Authentication)
+<br>
+
+### 2.2. 인증 (Authentication)
 
 발신자와 수신자는 서로의 신원을 확인하려고 합니다.
 
-### 무결성 (Integrity)
+<br>
+
+### 2.3. 무결성 (Integrity)
 
 발신자와 수신자는 메시지가 변경되지 않도록 하고 변경이 감지되지 않도록 하려고 합니다.
 
 <br><br>
 
-## Firewall
+## 3. Firewall
 
 방화벽은 조직의 내부 네트워크를 더 큰 인터넷에서 격리시키는 데 사용되며, 미리 정의된 규칙과 정책에 따라 일부 패킷(데이터)을 허용하고 다른 패킷을 차단합니다.
 
 <br>
 
-### Stateless packet filtering
+### 3.1. Stateless packet filtering
 
 방화벽 필터링 방법 중 하나이다. 이 방식은 패킷 간의 연결 상태를 추적하지 않습니다. 따라서 각 패킷은 개별적으로 처리되며, 이전 패킷과의 관련성을 고려하지 않습니다.
 
@@ -82,7 +92,7 @@
 
 <br>
 
-### Stateful packet filtering
+### 3.2. Stateful packet filtering
 
 "Stateful packet filtering"은 "Stateless packet filtering"에 비해 더 고급적인 네트워크 보안 방법입니다. 이 방식은 패킷 간의 연결 상태를 추적하며, 연결 상태 정보를 기반으로 패킷을 필터링합니다. 이러한 방식을 통해 더 정교한 보안 정책을 구현하고 불필요한 패킷을 차단할 수 있습니다.
 
@@ -96,13 +106,13 @@
 
 <br><br>
 
-## [OSI Model vs. TCP/IP Protocol Suite](https://github.com/swywssaid/TIL/blob/main/network/computer-network/intro.md#1-%ED%86%B5%EC%8B%A0-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EA%B3%BC-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B3%84%EC%B8%B5%EA%B5%AC%EC%A1%B0)
+## 4. [OSI Model vs. TCP/IP Protocol Suite](https://github.com/swywssaid/TIL/blob/main/network/computer-network/intro.md#1-%ED%86%B5%EC%8B%A0-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EA%B3%BC-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B3%84%EC%B8%B5%EA%B5%AC%EC%A1%B0)
 
 <br><br>
 
-## 네트워크 구성
+## 5. 네트워크 구성
 
-### 네트워크 엣지 (Network edge)
+### 5.1. 네트워크 엣지 (Network edge)
 
 네트워크 말단에 존재하는 여러 구성요소
 
@@ -111,7 +121,7 @@
 
 <br>
 
-### 엑세스 네트워크 (Access network)
+### 5.2. 엑세스 네트워크 (Access network)
 
 엣지가 인터넷 또는 다른 네트워크에 연결되는 지점
 
@@ -122,7 +132,7 @@
 
 <br>
 
-### 네트워크 코어 (Network core)
+### 5.3. 네트워크 코어 (Network core)
 
 전체 네트워크 시스템의 중앙에 위치하여 데이터를 전송하는 핵심적인 역할
 
@@ -153,11 +163,11 @@
 
 <br>
 
-### Network of networks
+### 5.4. Network of networks
 
 <br><br>
 
-## 종단간(E2EE,End to End Encryption)
+## 6. 종단간(E2EE,End to End Encryption)
 
 메시지를 처음부터 끝까지 평문으로 저장하지 않고 암호화하는 안전한 통신 방법
 
@@ -165,9 +175,9 @@
 
 <br><br>
 
-## Performance
+## 7. Performance
 
-### Delay
+### 7.1. Delay
 
 들어오는 패킷의 속도가 계속해서 링크의 전송 용량을 초과된 패킷들은 라우터 내의 버퍼에 대기하거나 큐에 들어감
 
@@ -188,7 +198,7 @@
 
 <br>
 
-### Loss
+### 7.2. Loss
 
 들어오는 패킷의 속도가 계속해서 링크의 전송 용량을 초과하고, 라우터의 메모리(버퍼)가 가득 찬다면, 메모리에 수용할 공간이 없는 패킷은 손실될 수 있다
 
@@ -196,19 +206,19 @@
 
 <br>
 
-### Throughput
+### 7.3. Throughput
 
 특정 기간 동안 네트워크를 통과하는 데이터의 양
 
 <br>
 
-### security
+### 7.4. security
 
 네트워크 성능과는 반비례
 
 <br><br>
 
-## ARPANET(Advanced Research Projects Agency Network)
+## 8. ARPANET(Advanced Research Projects Agency Network)
 
 1969년에 개발된 최초의 컴퓨터 네트워크로, 현재의 인터넷의 원조
 
@@ -221,7 +231,7 @@
 
 <br>
 
-### Layer들마다 기능이 어느 정도 겹친다. transport layer만의 장점(특성이었나?) 2가지
+### 8.1. Layer들마다 기능이 어느 정도 겹친다. transport layer만의 장점(특성이었나?) 2가지
 
 1.  End-to-End Communication 및 신뢰성 확보
 
@@ -238,15 +248,15 @@
 
 <br>
 
-### TCP/IP 모델 관련 문제(단순히 설명하시오는 아니었는데 어쨌든 이거 관련이었습니다)
+### 8.2. TCP/IP 모델 관련 문제(단순히 설명하시오는 아니었는데 어쨌든 이거 관련이었습니다)
 
 <br>
 
-### 통신이 이루어지고 있는 그림을 준다. 그래서 어떤 세션에서는 메시지 전송이 안되고 그 사실이 전송자에게는 전달이 되지 않은 상태에서 전송자는 계속 메시지를 보내고 있다.(이것들은 다 그림으로 되어 있는데 그냥 말로 적은 거에요) 특정 세션 이후에 예상되는 통신을 그리시오
+### 8.3. 통신이 이루어지고 있는 그림을 준다. 그래서 어떤 세션에서는 메시지 전송이 안되고 그 사실이 전송자에게는 전달이 되지 않은 상태에서 전송자는 계속 메시지를 보내고 있다.(이것들은 다 그림으로 되어 있는데 그냥 말로 적은 거에요) 특정 세션 이후에 예상되는 통신을 그리시오
 
 <br>
 
-### Layer 분할의 장점들과 단점들
+### 8.4. Layer 분할의 장점들과 단점들
 
 **장점**
 

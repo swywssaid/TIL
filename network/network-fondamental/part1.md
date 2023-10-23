@@ -182,13 +182,15 @@
 들어오는 패킷의 속도가 계속해서 링크의 전송 용량을 초과된 패킷들은 라우터 내의 버퍼에 대기하거나 큐에 들어감
 
 1. 전파 지연 (Propagation Delay)
-   - L : packet length (bits) 패킷 길이(데이터 크기)
-   - R : link transmission rate (bps) 대역폭
-   - d trans = L/R
-2. 전송 지연 (Transmission Delay)
    - d : length of physical link 거리
    - s: propagation speed (~2x108 m/sec)
    - d prop = d /s
+2. 전송 지연 (Transmission Delay)
+
+   - L : packet length (bits) 패킷 길이(데이터 크기)
+   - R : link transmission rate (bps) 대역폭
+   - d trans = L/R
+
 3. 대기열 지연 (Queuing Delay)
    - 전송을 위한 출력 링크를 기다리는 시간
    - 라우트의 혼잡 단계에 의존

@@ -14,22 +14,22 @@
 
 ## Sort
 
-- [Bubble Sort (거품 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/bubble-sort.md)
-- [Insertion Sort (삽입 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/insertion-sort.md)
-- [Selection Sort (선택 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/selection-sort.md)
-- [Merge Sort (합병 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/merge-sort/merge-sort.md)
-- [Quick Sort (퀵 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/quick-sort.md)
-- [Radix Sort (기수 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/radix-sort.md)
+- [Bubble Sort (거품 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/bubble-sort.md)
+- [Insertion Sort (삽입 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/insertion-sort.md)
+- [Selection Sort (선택 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/selection-sort.md)
+- [Merge Sort (합병 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/merge-sort/sorting/merge-sort.md)
+- [Quick Sort (퀵 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/quick-sort.md)
+- [Radix Sort (기수 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/radix-sort.md)
 
 <br><br>
 
 ## Search
 
-- [Searching Algorithm (Linear Search, Binary Search, Naive String Search)](https://github.com/swywssaid/TIL/blob/main/algorithm/searching-algorithm.md)
-- [Brute Force (완전 탐색)](https://github.com/swywssaid/TIL/blob/main/algorithm/brute-force.md)
+- [Searching Algorithm (Linear Search, Binary Search, Naive String Search)](https://github.com/swywssaid/TIL/blob/main/algorithm/searches/searching-algorithm.md)
+- [Brute Force (완전 탐색)](https://github.com/swywssaid/TIL/blob/main/algorithm/paradigm/brute-force.md)
 
 <br><br>
 
 ## ETC
 
-- [Greedy Algorithm (탐욕적 기법)](https://github.com/swywssaid/TIL/blob/main/algorithm/greedy.md)
+- [Greedy Algorithm (탐욕적 기법)](https://github.com/swywssaid/TIL/blob/main/algorithm/paradigm/greedy.md)

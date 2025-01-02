@@ -75,12 +75,12 @@
 
 ### 3.2. Sort
 
-- [Bubble Sort (거품 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/bubble-sort.md)
-- [Insertion Sort (삽입 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/insertion-sort.md)
-- [Selection Sort (선택 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/selection-sort.md)
-- [Merge Sort (합병 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/merge-sort/sorting/merge-sort.md)
-- [Quick Sort (퀵 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/quick-sort.md)
-- [Radix Sort (기수 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/radix-sort.md)
+- [Bubble Sort (거품 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/bubble-sort/bubble-sort.md)
+- [Insertion Sort (삽입 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/insertion-sort/insertion-sort.md)
+- [Selection Sort (선택 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/selection-sort/selection-sort.md)
+- [Merge Sort (합병 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/merge-sort/sorting/merge-sort/merge-sort.md)
+- [Quick Sort (퀵 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/quick-sort/quick-sort.md)
+- [Radix Sort (기수 정렬)](https://github.com/swywssaid/TIL/blob/main/algorithm/sorting/radix-sort/radix-sort.md)
 
 <br><br>
 

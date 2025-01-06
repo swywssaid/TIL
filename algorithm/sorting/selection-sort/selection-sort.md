@@ -1,4 +1,5 @@
 # **Selection Sort**
+
 - [**Selection Sort**](#selection-sort)
   - [**1. Selection Sort (선택 정렬)**](#1-selection-sort-선택-정렬)
   - [**2. Selection Sort VS Bubble Sort**](#2-selection-sort-vs-bubble-sort)
@@ -6,11 +7,11 @@
 <br /><br />
 
 ## **1. Selection Sort (선택 정렬)**
+
 - 배열에서 최소 요소(오름차순 기준)를 선택하여 올바른 위치에 배치하는 정렬 알고리즘이다.
 - 정렬된 부분과 아직 정렬되지 않은 부분으로 나뉘며 매 iteration 마다 아직 정렬되지 않은 부분에서 최소 요소를 찾는다.
-- 배열의 길이를 N이라 할 때 시간복잡도는 $O(N^2)$이다.
-    - 시간복잡도: $(N-1)+(N-2)+...+2+1=(N-1)*(N)/2\rightarrow O(N^2)$
-<img src="..\image\algorithm\selection-sort\selection-sort.png" width="600" height="330">
+- 배열의 길이를 N이라 할 때 시간복잡도는 $O(N^2)$이다. - 시간복잡도: $(N-1)+(N-2)+...+2+1=(N-1)*(N)/2\rightarrow O(N^2)$
+  <img src="..\..\..\image\algorithm\selection-sort\selection-sort.png" width="600" height="330">
 
 ```javascript
 // 배열 요소를 스왑한다.
@@ -43,9 +44,11 @@ function selectionSort(arr) {
 let arr = [4, 3, 2, 1, 5];
 selectionSort(arr);
 ```
+
 <br /><br />
 
 ## **2. Selection Sort VS [Bubble Sort](https://github.com/swywssaid/TIL/blob/main/algorithm/bubble-sort.md#bubble-sort)**
+
 <br />
 
 | 선택정렬                                                                              |                                                                     버블정렬 |
@@ -59,13 +62,14 @@ selectionSort(arr);
 
 <br />
 
->같은 시간복잡도인데도 선택정렬이 더 빠른 이유는 iteration 당 스왑을 한번만 하기 때문이다.
-  
+> 같은 시간복잡도인데도 선택정렬이 더 빠른 이유는 iteration 당 스왑을 한번만 하기 때문이다.
+
 <br /><br />
 
-## **Reference**<!-- omit in toc -->  
+## **Reference**<!-- omit in toc -->
+
 [Selection Sort Algorithm](https://www.geeksforgeeks.org/selection-sort/?ref=gcse)
 
 [Selection Sort VS Bubble Sort](https://www.geeksforgeeks.org/selection-sort-vs-bubble-sort/?ref=gcse)
 
-[알고리즘.데이터구조 with Nico](https://www.youtube.com/watch?v=NFETSCJON2M&list=PL7jH19IHhOLMdHvl3KBfFI70r9P0lkJwL&index=2) 
+[알고리즘.데이터구조 with Nico](https://www.youtube.com/watch?v=NFETSCJON2M&list=PL7jH19IHhOLMdHvl3KBfFI70r9P0lkJwL&index=2)

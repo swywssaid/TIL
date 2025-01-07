@@ -1,14 +1,13 @@
-# Doubly linked list <!--omit in toc -->
+# Doubly linked list
 
-- [Doubly linked list ](#doubly-linked-list-)
-  - [1. Doubly Linked List란](#1-doubly-linked-list란)
-  - [Doubly Linked list 구현](#doubly-linked-list-구현)
-  - [Doubly Linked list Big O](#doubly-linked-list-big-o)
-    - [Reference ](#reference-)
+- [Doubly linked list](#doubly-linked-list)
+  - [1. Doubly Linked List 란](#1-doubly-linked-list-란)
+  - [2. Doubly Linked list 구현](#2-doubly-linked-list-구현)
+  - [3. Doubly Linked list Big O](#3-doubly-linked-list-big-o)
 
 </br>
 
-## 1. Doubly Linked List란
+## 1. Doubly Linked List 란
 
 ![doubly-linked-list](https://github.com/swywssaid/TIL/blob/main/image/data-structure/linked-list/doubly-linked-list.png?raw=true)
 
@@ -18,7 +17,7 @@
 
 </br>
 
-## Doubly Linked list 구현
+## 2. Doubly Linked list 구현
 
 ```js
 class Node {
@@ -148,7 +147,7 @@ list.push("Hermione");
 
 </br>
 
-## Doubly Linked list Big O
+## 3. Doubly Linked list Big O
 
 단일 연결 리스트와는 다르게 양방향 접근이 가능하기 때문에 앞/뒤 제거 모두 상수 시간을 갖게 된다.
 
@@ -159,6 +158,6 @@ list.push("Hermione");
 
 </br>
 
-### Reference <!--omit in toc -->
+### Reference <!-- omit in toc -->
 
 [JavaScript 알고리즘 & 자료구조 마스터클래스](https://www.udemy.com/course/best-javascript-data-structures/)

@@ -93,6 +93,7 @@ class DoublyLinkedList {
     return this;
   }
 
+  // 양방향 탐색이 가능하기 때문에 헤드와 테일 부분 중 가까운 부분에서 시작을 하여 탐색한다.
   get(index) {
     if (index < 0 || index >= this.length) return null;
     var count, current;
